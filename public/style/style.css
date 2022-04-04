@@ -1,0 +1,36 @@
+.h2{
+    font-size: 64px;
+}
+.h3{
+    font-size: 32px;
+}
+.sp{
+    font-size: 16px;
+color: FF0000;
+
+}
+.rp{
+    font-size: 16px;
+
+}
+.tx{
+    font-size: 16px;
+}
+
+.material-icons.md-dark{
+    color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive{
+    color: rgba(0, 0, 0, 0.26);
+}
+.material-icons.md-18{
+    font-size: 18px;
+}
+.material-icons.md-24{
+    font-size: 24px;
+}
+
+.bt1{
+    width: 84px;
+    height: 26px;
+}
