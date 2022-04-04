@@ -34,3 +34,7 @@ color: FF0000;
     width: 84px;
     height: 26px;
 }
+
+body,html{
+    font-family: 'Itim', cursive;
+}
