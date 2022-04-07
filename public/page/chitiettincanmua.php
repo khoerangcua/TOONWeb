@@ -23,17 +23,17 @@
 				<div class="row" style="margin-top: 25px " >Harry Potter</div>
 				<div class="row" style="margin-top: 5px">Thể  loại: Phiêu lưu</div>
 				<div class="row" style="margin-top: 5px">Tác giả: Jack Thorne</div>
-				<div class="row" style="margin-top: 5px">Mô tả: Đây là phần mới nhất của bộ truyện Harry Potter. Tầm giá khoảng 50.000 vnd.Bạn nào có thì liên hệ ngay với mình bằng số điện thoại bên dưới hoặc vào trang của mình để biết nhiều thông tin hơn. Giá cả có thể thương lượng.</div>
+				<div class="row" style="margin-top: 5px">Mô tả: Đây là phần mới nhất của bộ truyện Harry Potter. Tầm giá khoảng 85.000 vnd.Bạn nào có thì liên hệ ngay với mình bằng số điện thoại bên dưới hoặc vào trang của mình để biết nhiều thông tin hơn. Giá cả có thể thương lượng.</div>
 			</div>
 		</div>
-		<div class="row" style="height: 100px"></div>
-		<div class="row">
-			<div class="col-md-4 ">
+		<div class="container-fluid " style="height: 100px" ></div>
+		<div class="row ">
+			<div class="col-md-4 col-lg-4 col-sm-4 divtaikhoan">
 				<div class="row" style="height: 100px; background-color: #AEADAD">
-					<div class="col-md-4">
+					<div class="col-md-4 col-lg-4 col-sm-4">
 						<img class="hinh_tron" src="../images/275225020_3180982448841648_1157249981496616579_n.png">
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-8 col-lg-8 col-sm-8">
 						<div class="row" style="margin-top: 20px ">Vô đối</div>
 						<div class="row" style="margin-top: 5px ">0123456456</div>
 					</div>

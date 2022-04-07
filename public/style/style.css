@@ -70,9 +70,12 @@ body,html{
 	width: 130px;
 	height: 130px;
 	border: 1px #0000 solid;
-	padding: 0px auto;
+	
     border-radius:50%;
-    -moz-border-radius:50%;
-    -webkit-border-radius:50%;
-
+}
+.divtaikhoan{
+	
+	margin-top: 100px;
+	border-top-left-radius:50%; 
+	border-bottom-left-radius: 50%;
 }
