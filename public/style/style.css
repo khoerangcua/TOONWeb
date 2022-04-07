@@ -38,3 +38,41 @@ color: FF0000;
 body,html{
     font-family: 'Itim', cursive;
 }
+/*---page MNCDT---*/
+.tieudeMNCDT{
+	text-align: center;
+	font-size: 80px;
+}
+.imglistMNCDT{
+	width: 80px;
+	height: 120px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+.rowlisttincanmua{
+	width: auto;
+	height: 150px;
+	background-color: white;
+}
+/*---page chi tiết tin cần mua---*/
+.imgchitietMNCDT{
+	width: 180px;
+	height: 250px;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+.rowchitiettincanmua{
+	width: auto;
+	height: 300px;
+	background-color: white;
+}
+.hinh_tron {
+	width: 100px;
+	height: 100px;
+	border: 1px #d4d4d4 solid;
+    padding: 7px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+
+}
