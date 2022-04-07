@@ -28,13 +28,13 @@
 		</div>
 		<div class="row" style="height: 100px"></div>
 		<div class="row">
-			<div class="col-md-6 ">
-				<div class="row" style="height: 100px; background-color: #969393">
-					<div class="col-md-1">
+			<div class="col-md-4 ">
+				<div class="row" style="height: 100px; background-color: #AEADAD">
+					<div class="col-md-4">
 						<img class="hinh_tron" src="../images/275225020_3180982448841648_1157249981496616579_n.png">
 					</div>
-					<div class="col-md-3">
-						<div class="row" style="margin-top: 5px ">Vô đối</div>
+					<div class="col-md-4">
+						<div class="row" style="margin-top: 20px ">Vô đối</div>
 						<div class="row" style="margin-top: 5px ">0123456456</div>
 					</div>
 				</div>
