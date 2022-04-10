@@ -1,0 +1,22 @@
+.pro-img{
+    padding: 20px;
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+.pro-info{
+    padding:10px 20px;
+}
+.pro-desc{
+    height: 130px !important;
+    
+}
+.btn-post{
+    color: #fff;
+    background-color: #002795;
+}
+.btn-post:hover{
+    color: #002795;
+    background-color: #fff;
+    border-color: 0.2px solid #002795;
+}
