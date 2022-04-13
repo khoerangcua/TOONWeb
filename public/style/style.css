@@ -14,7 +14,7 @@ color: FF0000;
 
 }
 .tx{
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .material-icons.md-dark{
@@ -36,36 +36,50 @@ color: FF0000;
 }
 
 body,html{
-    font-family: 'Itim', cursive;
+    font-family: 'Merriweather', serif;
+}
+.button{
+	padding: 8px 15px;
+	width: auto;
+	color: #FFFFFF;
+	text-align: center;
+	text-transform: uppercase;
+  	font-weight: 500;
+  	transition: all 0.5s ease;
+  	position: relative;
+	background: #000000;
+  	border: 0.2px solid #000000;
+  	z-index: 1;
+}
+.button:after {
+  	position: absolute;
+  	content: "";
+  	width: 0;
+  	height: 100%;
+  	top: 0;
+  	right: 0;
+  	z-index: -1;
+  	background-color: #FFFFFF;
+  	transition: all 0.5s ease;
+}
+.button:hover{
+  	color: #000000;
+	border: 0.2px solid #000000;	
+}
+.button:hover:after {
+  	left: 0;
+  	width: 100%;
 }
 /*---page MNCDT---*/
-.tieudeMNCDT{
-	text-align: center;
-	font-size: 80px;
-}
-.imglistMNCDT{
-	width: 80px;
-	height: 120px;
-	margin-bottom: 15px;
-	margin-top: 15px;
-}
+
 .rowlisttincanmua{
 	width: auto;
 	height: 150px;
 	background-color: white;
 }
 /*---page chi tiết tin cần mua---*/
-.imgchitietMNCDT{
-	width: 180px;
-	height: 250px;
-	margin-bottom: 25px;
-	margin-top: 25px;
-}
-.rowchitiettincanmua{
-	width: auto;
-	height: 300px;
-	background-color: white;
-}
+
+
 .hinh_tron {
 	width: 130px;
 	height: 130px;
@@ -74,7 +88,6 @@ body,html{
     border-radius:50%;
 }
 .divtaikhoan{
-	
 	margin-top: 100px;
 	border-top-left-radius:50%; 
 	border-bottom-left-radius: 50%;

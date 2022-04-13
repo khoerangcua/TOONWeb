@@ -20,7 +20,7 @@
 	<!--my style-->
 	<link rel="stylesheet" href="../style/style.css">
 	<link rel="stylesheet" href="../style/detailpost.css">
-	<title>Chi tiết tin cần mua</title>
+	<title>Chi tiết tin cần bán</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
 	</style>
 	<div class="container">
 		<div class="row ">
-			<p class="detail-header">Chi tiết Tin Đăng Mua</p>
+			<p class="detail-header">Chi tiết Tin Đăng Ban</p>
 		</div>
 
 		<div class="row info-item-buy">
@@ -52,7 +52,7 @@
 				</div>
 			</div>
 		</div>
-        <p style="float:right; margin:20px 0 0 0;">Bạn đang có sản phẩm này và muốn bán?</p>
+        <p style="float:right; margin:20px 0 0 0;">Bạn muốn sở hữu cuốn sách này?  </p>
         <br style="clear:both">
 		<div class="row contact">
 			<div class="info-buyer">

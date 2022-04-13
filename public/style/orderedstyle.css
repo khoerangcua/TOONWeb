@@ -1,0 +1,38 @@
+#img1{
+    width: 220px;
+    padding: 20px 10px;
+}   
+
+#title1{
+    text-align: center;
+    font-size: 64px;
+    color: #002795;
+}
+.col-lg-9{
+    right: 0%;
+    top: 0%;
+    font-size: 32px;
+    padding: 8px 0px;
+}
+#mid{
+    background-color: white;
+}
+body{
+    background-color: #ffd154;
+}
+#datlai{
+    font-size: 35px;
+    text-decoration: none;
+    margin-top: 20px;
+    background-color: #002795;
+    color: fff;
+    padding: 1px 10px;
+    border: #002795;
+    margin-left: 1000px;
+}
+#datlai:hover{
+    color: #002795;
+    background-color: #fff;
+    border: #002795;
+    border-style: solid;
+}
