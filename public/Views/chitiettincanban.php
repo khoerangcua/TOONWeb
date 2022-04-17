@@ -20,50 +20,23 @@
 	<!--my style-->
 	<link rel="stylesheet" href="../style/style.css">
 	<link rel="stylesheet" href="../style/detailpost.css">
+	
 	<title>Chi tiết tin cần bán</title>
+
 </head>
 
 <body>
-	<style>
-		body {
-			background-color: #FFD954;
-		}
-	</style>
-	<div class="container">
-		<div class="row ">
-			<p class="detail-header">Chi tiết Tin Đăng Ban</p>
-		</div>
-
-		<div class="row info-item-buy">
-			<div class="col-md-4 col-lg-3 col-xl-3 col-12 text-center">
-				<img class="imgchitietMNCDT" src="../images/harrypotter_ylup.jpg" alt="Hình ảnh sách cần mua">
-			</div>
-			<div class="col-md-8 col-lg-9 col-xl-9 col-12">
-				
-				<div class="desc">
-					<p class="name-buy">Truyen tranh khong mau</p>
-					<p class="price-buy">123,000đ</p>
-					<p class="info-buy tx">Sách Tiếng Việt lớp 1
-					Số lượng: 1
-					ahfhsalkfakshfasfkasf
-					asfasaagsgasgagvasdv
-					agewegsgsgdsdf
-				</p>
-				</div>
-			</div>
-		</div>
-        <p style="float:right; margin:20px 0 0 0;">Bạn muốn sở hữu cuốn sách này?  </p>
-        <br style="clear:both">
-		<div class="row contact">
-			<div class="info-buyer">
-				<button class="button contactbtn"> Lien he ngay</button>
-				<a href="" ><img class="img-buyer" src="../images/275225020_3180982448841648_1157249981496616579_n.png"></a>
-				<div>
-
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php
+	require_once("private/Controllers/ChitiettincanbanController.php");
+	$chiTietBaiDangBanCtrl = new ChiTietBaiDangBanCtrl();
+	$chiTietBaiDangBanCtrl->LoadChiTietBaiDangBan();
+	
+	echo "<p class='price-buy'>Test the P</p>";
+	?>
+	
+	<p class="price-buy">Test the P 2</p>
+	
+	
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
-require_once("../backend/private/modules/db_module.php");
- class TinCanMuaModel{
+require_once("private/Modules/db_module.php");
+ class BaiDangBanModel{
 	 public function LoadBaiDangBan(){
 		$baidangban = array();
 		$link = "";
@@ -17,12 +17,23 @@ require_once("../backend/private/modules/db_module.php");
 		$baidangban = array();
 		$link = "";
 		taoKetNoi($link);
-		$result = chayTruyVanTraVeDL($link,"select * from tbl_baidangban");
+		$result = chayTruyVanTraVeDL($link,"select * from tbl_baidangban where `idbaidang` = $idbaidangban");
 		while($rows = mysqli_fetch_assoc($result)){
 		array_push($baidangban, $rows);
 		break;
 		}
 		return $baidangban[0];
 	}
+	 public function LoadTaiKhoan($idtaikhoan){
+		$taikhoan = array();
+		$link = "";
+		taoKetNoi($link);
+		$result = chayTruyVanTraVeDL($link,"select * from tbl_baidangban where `idbaidang` = $idbaidangban");
+		while($rows = mysqli_fetch_assoc($result)){
+		array_push($taikhoan, $rows);
+		break;
+		}
+		return $taikhoan[0];
+	 }
  }
 ?>

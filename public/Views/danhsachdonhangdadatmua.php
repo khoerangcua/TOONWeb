@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <!--my style-->
-    <link rel="stylesheet" href="public/style/style.css">
+    <link rel="stylesheet" href="../page/public/style/style.css">
     
 </head>
 <body>
