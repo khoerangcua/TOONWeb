@@ -1,0 +1,37 @@
+.manage{
+    height: 30px;
+    background-color: #ffd154;
+    text-align: center;
+}
+.items{
+    padding: 10px 0px;
+    margin:0 10px 10px 10px;
+}
+.img-wrapper{
+    padding:0px 0px 0px 20px;
+}
+.pro-img{
+    width: 100px;
+    height: 130px;
+    object-fit: cover;
+}.items a{
+    text-decoration: none;
+    color: #000;
+}
+.title{
+    text-align:center; 
+    text-transform:uppercase;
+    padding: 40px;
+}
+.buying, .selling{
+    color: #ffd154;
+    font-weight: 600;
+}
+.bought, .sold{
+    font-weight: 600;
+    color: #23C957;
+}
+.cancel{
+    font-weight: 600;
+    color: #C92323;
+}
