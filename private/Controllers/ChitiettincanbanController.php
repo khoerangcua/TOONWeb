@@ -30,13 +30,13 @@ class ChiTietBaiDangBanCtrl
 					<div class='col-md-8 col-lg-9 col-xl-9 col-12'>
 				
 						<div class='desc'>
-							<p class='name-buy'>'".$baidangban["tensach"]."'</p>
-							<p>Tác giả:'".$baidangban["tacgia"]."'</p>
-							<p>Tác giả:'".$baidangban["theloai"]."'</p>
-							<p class='price-buy'>'".$baidangban["gia"]."'</p>
-							<p>Số lượng:'".$baidangban["soluong"]."' </p>
+							<p class='name-buy'>".$baidangban["tensach"]."</p>
+							<p>Tác giả: ".$baidangban["tacgia"]."</p>
+							<p>Thể loại: ".$baidangban["theloai"]."</p>
+							<p class='price-buy'>Giá: ".$baidangban["gia"]."</p>
+							<p>Số lượng: ".$baidangban["soluong"]." </p>
 							
-							<p class='info-buy tx'>Mô tả: '".$baidangban["mota"]."'</p>
+							<p class='info-buy tx'>Mô tả: ".$baidangban["mota"]."</p>
 					
 						</div>
 					</div>
@@ -46,7 +46,7 @@ class ChiTietBaiDangBanCtrl
 					<div class='row contact'>
 						<div class='info-buyer'>
 							<button class='button contactbtn'> Lien he ngay</button>
-							<a href='' ><img class='img-buyer' src='../images/275225020_3180982448841648_1157249981496616579_n.png'></a>
+							<a href='' ><img class='img-buyer' src='".$baidangban["anhnguoidung"]."'></a>
 						<div>
 
 						</div>

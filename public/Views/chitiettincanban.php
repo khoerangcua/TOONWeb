@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -18,8 +18,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 	<!--my style-->
-	<link rel="stylesheet" href="../style/style.css">
-	<link rel="stylesheet" href="../style/detailpost.css">
+	<link rel="stylesheet" href="public/style/style.css">
+	<link rel="stylesheet" href="public/style/detailpost.css">
+	<link rel="stylesheet" type="text/css" href="testcss.css">
+	
 	
 	<title>Chi tiết tin cần bán</title>
 
@@ -28,13 +30,13 @@
 <body>
 	<?php
 	require_once("private/Controllers/ChitiettincanbanController.php");
+	
 	$chiTietBaiDangBanCtrl = new ChiTietBaiDangBanCtrl();
 	$chiTietBaiDangBanCtrl->LoadChiTietBaiDangBan();
 	
-	echo "<p class='price-buy'>Test the P</p>";
+	
 	?>
 	
-	<p class="price-buy">Test the P 2</p>
 	
 	
 </body>

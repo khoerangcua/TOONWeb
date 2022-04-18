@@ -13,7 +13,9 @@ class SwichPageControler
                 case 'chitiettincanban':
                     include_once("public/Views/chitiettincanban.php");
                     break;
-                
+                case 'chitiettincanmua':
+                    include_once("public/Views/chitiettincanmua.php");
+                    break;
               
             }
         } else {

@@ -18,52 +18,20 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 	<!--my style-->
-	<link rel="stylesheet" href="../style/style.css">
-	<link rel="stylesheet" href="../style/detailpost.css">
+	<link rel="stylesheet" href="public/style/style.css">
+	<link rel="stylesheet" href="public/style/detailpost.css">
 	<title>Chi tiết tin cần mua</title>
 </head>
 
 <body>
-	<style>
-		body {
-			background-color: #FFD954;
-		}
-	</style>
-	<div class="container">
-		<div class="row ">
-			<p class="detail-header">Chi tiết Tin Đăng Mua</p>
-		</div>
-
-		<div class="row info-item-buy">
-			<div class="col-md-4 col-lg-3 col-xl-3 col-12 text-center">
-				<img class="imgchitietMNCDT" src="../images/harrypotter_ylup.jpg" alt="Hình ảnh sách cần mua">
-			</div>
-			<div class="col-md-8 col-lg-9 col-xl-9 col-12">
-				
-				<div class="desc">
-					<p class="name-buy">Truyen tranh khong mau</p>
-					<p class="price-buy">123,000đ</p>
-					<p class="info-buy tx">Sách Tiếng Việt lớp 1
-					Số lượng: 1
-					ahfhsalkfakshfasfkasf
-					asfasaagsgasgagvasdv
-					agewegsgsgdsdf
-				</p>
-				</div>
-			</div>
-		</div>
-        <p style="float:right; margin:20px 0 0 0;">Bạn đang có sản phẩm này và muốn bán?</p>
-        <br style="clear:both">
-		<div class="row contact">
-			<div class="info-buyer">
-				<button class="button contactbtn"> Lien he ngay</button>
-				<a href="" ><img class="img-buyer" src="../images/275225020_3180982448841648_1157249981496616579_n.png"></a>
-				<div>
-
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php
+	require_once("private/Controllers/ChitiettincanmuaController.php");
+	
+	$chiTietTinCanMuaCtrl = new ChiTietTinCanMuaCtrl();
+	$chiTietTinCanMuaCtrl->LoadChiTietTinCanMua();
+	
+	
+	?>
 </body>
 
 </html>
