@@ -11,7 +11,7 @@ class ChiTietTinCanMuaCtrl
 		}
 		else{
 			$tincanmuaModel = new TinCanMuaModel();
-			$tincanmua = $tincanmuaModel->LoadChiTietTCMua($id_TCMua);
+			$tincanmua = $tincanmuaModel->LoadChiTietTinCanMua($id_TCMua);
 			echo'
 			<style>
 				body {

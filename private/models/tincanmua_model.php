@@ -13,7 +13,7 @@ require_once("private/Modules/db_module.php");
 		giaiPhongBoNho($link, $result);
 		return $tincanmua;
 	 }
-	public function LoadChiTietTCMua($idtincanmua){
+	public function LoadChiTietTinCanMua($idtincanmua){
 		$tincanmua = array();
 		$link = "";
 		taoKetNoi($link);

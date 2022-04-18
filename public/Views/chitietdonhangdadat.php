@@ -18,50 +18,20 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 	<!--my style-->
-	<link rel="stylesheet" href="../style/style.css">
-	<link rel="stylesheet" href="../style/detailpost.css">
+	<link rel="stylesheet" href="public/style/style.css">
+	<link rel="stylesheet" href="public/style/detailpost.css">
 	<title>Chi tiết đơn hàng</title>
 </head>
 
 <body>
-	<style>
-		body {
-			background-color: #FFD954;
-		}
-	</style>
-	<div class="container">
-		<div class="row ">
-			<p class="detail-header">Chi tiết Đơn đặt hàng</p>
-		</div>
-
-		<div class="row info-item-buy">
-			<div class="col-md-4 col-lg-3 col-xl-3 col-12 text-center">
-				<img class="imgchitietMNCDT" src="../images/harrypotter_ylup.jpg">
-			</div>
-			<div class="col-md-8 col-lg-9 col-xl-9 col-12">
-				
-				<div class="desc">
-					<p class="name-buy">Truyen tranh khong mau</p>
-					<p class="price-buy">123,000đ</p>
-					<p class="info-buy tx">Sách Tiếng Việt lớp 1
-					Số lượng: 1
-					ahfhsalkfakshfasfkasf
-					asfasaagsgasgagvasdv
-					agewegsgsgdsdf
-				</p>
-				</div>
-			</div>
-		</div>
-        <br style="clear:both">
-		<div class="row contact">
-			<div class="info-buyer">
-				<button class="button contactbtn" style="padding: 10px 20px;">Đặt lại</button>
-				<div>
-
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php
+	require_once("private/Controllers/ChitietdondathangController.php");
+	
+	$chiTietDonDatHangCtrl = new ChiTietDonDatHangCtrl();
+	$chiTietDonDatHangCtrl->LoadChiTietDonDatHang();
+	
+	
+	?>
 </body>
 
 </html>
