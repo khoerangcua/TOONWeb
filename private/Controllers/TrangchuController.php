@@ -25,7 +25,8 @@ class TrangChuCtrl
 	{
 		$baidangbanModel = new BaiDangBanModel();
 		$baidangban = $baidangbanModel->LoadBaiDangBan();
-		for($i = 0; $i <= count($baidangban); $i++){
+			
+		for($i = 0; $i < count($baidangban); $i++){
 			echo '
 			
 				<div class="col-lg-3 col-md-6 col-6 products">

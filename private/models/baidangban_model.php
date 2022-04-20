@@ -8,7 +8,7 @@ require_once("private/Modules/db_module.php");
 		$result = chayTruyVanTraVeDL($link,"SELECT * FROM tbl_baidangban WHERE tbl_baidangban.trangthai = 1 ");
 		while($rows = mysqli_fetch_assoc($result)){
 		array_push($baidangban, $rows);
-		break;
+		
 		}
 		giaiPhongBoNho($link, $result);
 		return $baidangban;
