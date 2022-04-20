@@ -19,6 +19,9 @@ class SwichPageControler
                 case 'chitietdondathang':
                     include_once("public/Views/chitietdonhangdadat.php");
                     break;
+				case 'trangchu':
+                    include_once("public/Views/trangchu.php");
+                    break;
             }
         } else {
             include_once("public/Views/chitiettincanmua.php");

@@ -60,7 +60,6 @@
                         <img class="pro-img" src="/public/resource/qT7fictFknJ9.jpg">
                     </a>
                 </div>
-
                 <div class="col-md-9 col-lg-10 col-xl-10 col-7">
                     <div>
                         <div class="d-flex justify-content-between">

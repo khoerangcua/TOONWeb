@@ -5,7 +5,7 @@ require_once("private/Modules/db_module.php");
 		$tincanmua = array();
 		$link = "";
 		taoKetNoi($link);
-		$result = chayTruyVanTraVeDL($link,"select * from tbl_tincanmua");
+		$result = chayTruyVanTraVeDL($link,"SELECT * FROM tbl_tincanmua WHERE tbl_tincanmua.trangthai = 1 ");
 		while($rows = mysqli_fetch_assoc($result)){
 		array_push($tincanmua, $rows);
 		break;

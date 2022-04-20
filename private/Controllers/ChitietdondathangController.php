@@ -34,7 +34,8 @@ class ChiTietDonDatHangCtrl
 							<p class="price-buy">Giá: '.$dondathang["dongia"].'đ</p>
 							<p>Tình trạng: '.$dondathang["tinhtrang"].'</p>
 							<p class="info-buy tx"> Địa chỉ nhận hàng: '.$dondathang["diachi"].'</p>
-							<p>Mã giao dịch: '.$dondathang["iddondathang"].'</p>
+							<p>Mã giao dịch người bán: '.$dondathang["idnguoiban"].'</p>
+							<p>Mã giao dịch người mua: '.$dondathang["idnguoimua"].'</p>
 						</div>
 					</div>
 				</div>
