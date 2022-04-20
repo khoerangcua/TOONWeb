@@ -1,7 +1,30 @@
 .manage{
-    height: 30px;
     background-color: #ffd154;
     text-align: center;
+}
+.manage ul{
+    background-color: #fff;
+    padding: 0;
+}
+.manage ul li{
+    padding: 10px;
+    border: #ffecb9 solid 1px;
+}
+.form-check{
+    padding: 0;
+}
+.menu-active{
+    background-color: #ffecb9;
+}
+.menu{
+    text-transform: uppercase;
+    align-items: center;
+    height: 45px;
+    padding: 10px;
+}
+.form-check a{
+    text-decoration: none;
+    color: #000;
 }
 .items{
     padding: 10px 0px;

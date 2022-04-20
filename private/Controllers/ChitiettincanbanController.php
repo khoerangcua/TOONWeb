@@ -45,7 +45,7 @@ class ChiTietBaiDangBanCtrl
         				<br style='clear:both'>
 					<div class='row contact'>
 						<div class='info-buyer'>
-							<button class='button contactbtn'> Lien he ngay</button>
+							<button class='button contactbtn'>Liên hệ ngay</button>
 							<a href='' ><img class='img-buyer' src='".$baidangban["anhnguoidung"]."'></a>
 						<div>
 
