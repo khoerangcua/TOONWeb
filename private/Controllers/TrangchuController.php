@@ -12,6 +12,9 @@ class TrangChuCtrl
 				case "ban":
 					$this->LoadTinBan();
 					break;
+				case "":
+					$this->LoadTinBan();
+					break;
 				case "mua":
 					$this->LoadTinMua();
 					break;
@@ -24,7 +27,7 @@ class TrangChuCtrl
 	public function LoadTinBan()
 	{
 		$baidangbanModel = new BaiDangBanModel();
-		$baidangban = $baidangbanModel->LoadBaiDangBan();
+		$baidangban = $baidangbanModel->LoadBaiDangBanDaDuyet();
 			
 		for($i = 0; $i < count($baidangban); $i++){
 			echo '
@@ -51,7 +54,7 @@ class TrangChuCtrl
 	public function LoadTinMua()
 	{
 		$tincanmuaModel = new TinCanMuaModel();
-		$tincanmua = $tincanmuaModel->LoadTinCanMua();
+		$tincanmua = $tincanmuaModel->LoadTinCanMuaDaDuyet();
 		for($i = 0; $i < count($tincanmua); $i++){
 			echo '
 				<div class="col-lg-3 col-md-6 col-6 products">

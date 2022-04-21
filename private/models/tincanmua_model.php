@@ -1,7 +1,7 @@
 <?php
 require_once("private/Modules/db_module.php");
  class TinCanMuaModel{
-	 public function LoadTinCanMua(){
+	 public function LoadTinCanMuaDaDuyet(){
 		$tincanmua = array();
 		$link = "";
 		taoKetNoi($link);

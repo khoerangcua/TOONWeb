@@ -22,9 +22,12 @@ class SwichPageControler
 				case 'trangchu':
                     include_once("public/Views/trangchu.php");
                     break;
+				case 'kiemduyet':
+                    include_once("public/Views/danhsachbaidang.php");
+                    break;
             }
         } else {
-            include_once("public/Views/chitiettincanmua.php");
+            include_once("public/Views/trangchu.php");
         }
     }
 }
