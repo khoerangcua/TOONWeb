@@ -12,5 +12,17 @@ public function LoadChiTietDonDatHang($iddondathang){
 		}
 		return $dondathang[0];
 	}
+public function LoadDonDatHangFull(){
+		$dondathang = array();
+		$link = "";
+		taoKetNoi($link);
+		$result = chayTruyVanTraVeDL($link,"SELECT tbl_dondathang.* , tbl_baidangban.diachianh, tbl_baidangban.tensach FROM tbl_dondathang INNER JOIN tbl_baidangban ON tbl_dondathang.idbaidang = tbl_baidangban.idbaidang ORDER BY tbl_dondathang.thoigian");
+		while($rows = mysqli_fetch_assoc($result)){
+		array_push($dondathang, $rows);
+		
+		}
+		giaiPhongBoNho($link, $result);
+		return $dondathang;
+	 }
 }
 ?>
