@@ -18,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <!--my style-->
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/quanlistyle.css">
+    <link rel="stylesheet" href="public/style/style.css">
+    <link rel="stylesheet" href="public/style/quanlistyle.css">
 </head>
 
 <body>
@@ -29,111 +29,46 @@
             <div class="col-12 col-md-3 col-lg-2" style="padding: 0;">
                 <div class="manage wtb">
                     <div class="menu">
-                    <span onClick="buymenutoggle(this)">Bài đăng mua ▼</span>
+                    <span onClick="buymenutoggle(this)" href="index.php?to=kiemduyet&xem=mua&duyet=full">Bài đăng mua ▼</span>
+					
                     </div>
                     <ul id="dropmenu-buy">
                         <li class="form-check menu-active">
-                            <a href="">Bài đang chờ duyệt</a>
+                            <a href="index.php?to=kiemduyet&xem=mua&duyet=cho">Bài đang chờ duyệt</a>
                         </li>
                         <li class="form-check">
-                            <a href="">Bài đã duyệt</a>
+                            <a href="index.php?to=kiemduyet&xem=mua&duyet=da">Bài đã duyệt</a>
                         </li>
                         <li class="form-check">
-                            <a href="">Bài bị từ chối</a>
+                            <a href="index.php?to=kiemduyet&xem=mua&duyet=huy">Bài bị từ chối</a>
                         </li>
                     </ul>
                 </div>
                 <div class="manage wts">
                     <div class="menu"> 
-                        <span onClick="sellmenutoggle(this)">Bài đăng bán ▼</span>
+                        <span onClick="sellmenutoggle(this)" href="index.php?to=kiemduyet&xem=ban&duyet=full">Bài đăng bán ▼</span>
+						
                     </div>
                     <ul id="dropmenu-sell">
                         <li class="form-check">
-                            <a href="">Bài đang chờ duyệt</a>
+                            <a href="index.php?to=kiemduyet&xem=ban&duyet=cho">Bài đang chờ duyệt</a>
                         </li>
                         <li class="form-check">
-                            <a href="">Bài đã duyệt</a>
+                            <a href="index.php?to=kiemduyet&xem=ban&duyet=da">Bài đã duyệt</a>
                         </li>
                         <li class="form-check">
-                            <a href="">Bài bị từ chối</a>
+                            <a href="index.php?to=kiemduyet&xem=ban&duyet=huy">Bài bị từ chối</a>
                         </li>
                     </ul>
                 </div>
                 
             </div>
             <div class="col-12 col-md-9 col-lg-10">
-                <div class="row items">
-                    <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
-                            <img class="pro-img" src="/public/resource/qT7fictFknJ9.jpg">
-                        </a>
-                    </div>
-                    <div class="col-md-9 col-lg-10 col-xl-10 col-7">
-                        <div>
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <a href="">Truyen tranh DragonBall</a>
-                                    <p class="mb-5 pro-price">15.000d</p>
-                                    <p class="buying">Đang chờ duyệt</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row items">
-                    <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
-                            <img class="pro-img" src="/public/resource/qT7fictFknJ9.jpg">
-                        </a>
-                    </div>
-                    <div class="col-md-9 col-lg-10 col-xl-10 col-7">
-                        <div>
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <a href="">Truyen tranh DragonBall</a>
-                                    <p class="mb-5 pro-price">15.000d</p>
-                                    <p class="buying">Đang chờ duyệt</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row items">
-                    <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
-                            <img class="pro-img" src="/public/resource/qT7fictFknJ9.jpg">
-                        </a>
-                    </div>
-                    <div class="col-md-9 col-lg-10 col-xl-10 col-7">
-                        <div>
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <a href="">Truyen tranh DragonBall</a>
-                                    <p class="mb-5 pro-price">15.000d</p>
-                                    <p class="bought">Đã duyệt</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row items">
-            <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                <a href="" class="img-wrapper">
-                    <img class="pro-img" src="/public/resource/qT7fictFknJ9.jpg">
-                </a>
-            </div>
-            <div class="col-md-9 col-lg-10 col-xl-10 col-7">
-                <div>
-                    <div class="d-flex justify-content-between">
-                        <div>
-                            <a href="">Truyen tranh DragonBall</a>
-                            <p class="mb-5 pro-price">15.000d</p>
-                            <p class="cancel">Đã bị từ chối</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
+                <?php 
+					require_once("private/Controllers/TrangkiemduyetController.php");
+					$trangkiemduyetCtrl = new TrangKiemDuyetCtrl();
+					$trangkiemduyetCtrl->LoadBaiDangTrangKiemDuyet();
+					?>
         </div>
             </div>
         </div>
