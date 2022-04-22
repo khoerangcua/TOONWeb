@@ -74,7 +74,7 @@
         </div>
 
     </div>
-<script src="../script/kiemduyetscript.js"></script>
+<script src="public/script/kiemduyetscript.js"></script>
 </body>
 
 </html>

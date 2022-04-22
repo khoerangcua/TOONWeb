@@ -66,7 +66,7 @@
         </div>
 
     </div>
-<script src="../script/trangquanliscript.js"></script>
+<script src="public/script/trangquanliscript.js"></script>
 </body>
 
 </html>
