@@ -29,6 +29,7 @@ class TrangChuCtrl
 		$baidangbanModel = new BaiDangBanModel();
 		$baidangban = $baidangbanModel->LoadBaiDangBanDaDuyet();
 			
+		echo '<a href="" class="switch-page">Bạn đang muốn mua vài cuốn sách? Nhấp vào <b>đây</b> </a>';
 		for($i = 0; $i < count($baidangban); $i++){
 			echo '
 			
@@ -55,6 +56,7 @@ class TrangChuCtrl
 	{
 		$tincanmuaModel = new TinCanMuaModel();
 		$tincanmua = $tincanmuaModel->LoadTinCanMuaDaDuyet();
+		echo '<a href="" class="switch-page">Bạn đang có sách muốn bán? Nhấp vào <b>đây</b> </a>';
 		for($i = 0; $i < count($tincanmua); $i++){
 			echo '
 				<div class="col-lg-3 col-md-6 col-6 products">

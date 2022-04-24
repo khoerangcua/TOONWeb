@@ -124,3 +124,13 @@ border: none;
     text-decoration: none;
     color: #000;
 }
+.switch-page{
+    color:#002795;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 550;
+    margin: 10px 0;
+}
+.switch-page:hover{
+    color: #3c559a;
+}

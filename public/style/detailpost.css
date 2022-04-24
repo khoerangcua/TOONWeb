@@ -1,3 +1,6 @@
+body {
+	background-color: #FFD954;
+}
 .desc{
     padding: 15px 0px;
 }
@@ -69,4 +72,34 @@
     max-width: 100%;
     height: auto;
     transition: all 0.5s ease 0s;
+}
+.btn-allow{
+    width: 120px;
+    padding-left: 10px 20px; 
+    margin-right: 1.25rem;
+    border: #16b555 solid 1px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #16b555;
+}
+.btn-allow:hover{
+    color: #16b555;
+    background-color: #fff;
+    border-color: 0.2px solid #16b555;
+}
+.btn-reject{
+    width: 120px;
+    padding-left: 10px 20px; 
+    border: #c42020 solid 1px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #c42020;
+}
+.btn-reject:hover{
+    
+    color: #c42020;
+    background-color: #fff;
+    border-color: 0.2px solid #c42020;
 }
