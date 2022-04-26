@@ -13,11 +13,6 @@ class ChiTietDonDatHangCtrl
 			$dondathangModel = new DonDatHangModel();
 			$dondathang = $dondathangModel->LoadChiTietDonDatHang($id_DDHang);
 			echo'
-			<style>
-				body {
-					background-color: #FFD954;
-				}
-			</style>
 			<div class="container">
 				<div class="row ">
 					<p class="detail-header">Chi tiết Đơn đặt hàng</p>
