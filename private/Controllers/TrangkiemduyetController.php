@@ -60,7 +60,7 @@ class TrangKiemDuyetCtrl
 			echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
+                        <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'" class="img-wrapper">
                             <img class="pro-img" src="'.$baidangban[$i]["diachianh"].'">
                         </a>
                     </div>
@@ -68,7 +68,7 @@ class TrangKiemDuyetCtrl
                         <div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <a href="">'.$baidangban[$i]["tensach"].'</a>
+                                    <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
                                     <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'d</p>
                                     <p class="buying">'.$this->Loadtrangthai($baidangban[$i]["trangthai"]).'</p>
                                 </div>
@@ -88,7 +88,7 @@ class TrangKiemDuyetCtrl
 			echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
+                        <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'" class="img-wrapper">
                             <img class="pro-img" src="'.$baidangban[$i]["diachianh"].'">
                         </a>
                     </div>
@@ -96,7 +96,7 @@ class TrangKiemDuyetCtrl
                         <div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <a href="">'.$baidangban[$i]["tensach"].'</a>
+                                    <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
                                     <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'d</p>
                                     <p class="buying">'.$this->Loadtrangthai($baidangban[$i]["trangthai"]).'</p>
                                 </div>
@@ -116,7 +116,7 @@ class TrangKiemDuyetCtrl
 			echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
+                        <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'" class="img-wrapper">
                             <img class="pro-img" src="'.$baidangban[$i]["diachianh"].'">
                         </a>
                     </div>
@@ -124,7 +124,7 @@ class TrangKiemDuyetCtrl
                         <div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <a href="">'.$baidangban[$i]["tensach"].'</a>
+                                    <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
                                     <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'d</p>
                                     <p class="buying">'.$this->Loadtrangthai($baidangban[$i]["trangthai"]).'</p>
                                 </div>
@@ -144,7 +144,7 @@ class TrangKiemDuyetCtrl
 			echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
+                        <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'" class="img-wrapper">
                             <img class="pro-img" src="'.$baidangban[$i]["diachianh"].'">
                         </a>
                     </div>
@@ -152,7 +152,7 @@ class TrangKiemDuyetCtrl
                         <div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <a href="">'.$baidangban[$i]["tensach"].'</a>
+                                    <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
                                     <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'d</p>
                                     <p class="buying">'.$this->Loadtrangthai($baidangban[$i]["trangthai"]).'</p>
                                 </div>
@@ -171,7 +171,7 @@ class TrangKiemDuyetCtrl
 			echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
+                        <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'" class="img-wrapper">
                             <img class="pro-img" src="'.$tincanmua[$i]["hinhanh"].'">
                         </a>
                     </div>
@@ -179,7 +179,7 @@ class TrangKiemDuyetCtrl
                         <div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <a href="">'.$tincanmua[$i]["tensach"].'</a>
+                                    <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a>
                                     <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'d</p>
                                     <p class="buying">'.$this->Loadtrangthai($tincanmua[$i]["trangthai"]).'</p>
                                 </div>
@@ -198,7 +198,7 @@ class TrangKiemDuyetCtrl
 			echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
+                        <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'" class="img-wrapper">
                             <img class="pro-img" src="'.$tincanmua[$i]["hinhanh"].'">
                         </a>
                     </div>
@@ -206,7 +206,7 @@ class TrangKiemDuyetCtrl
                         <div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <a href="">'.$tincanmua[$i]["tensach"].'</a>
+                                    <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a>
                                     <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'d</p>
                                     <p class="buying">'.$this->Loadtrangthai($tincanmua[$i]["trangthai"]).'</p>
                                 </div>
@@ -225,7 +225,7 @@ class TrangKiemDuyetCtrl
 			echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
+                        <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'" class="img-wrapper">
                             <img class="pro-img" src="'.$tincanmua[$i]["hinhanh"].'">
                         </a>
                     </div>
@@ -233,7 +233,7 @@ class TrangKiemDuyetCtrl
                         <div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <a href="">'.$tincanmua[$i]["tensach"].'</a>
+                                    <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a>
                                     <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'d</p>
                                     <p class="buying">'.$this->Loadtrangthai($tincanmua[$i]["trangthai"]).'</p>
                                 </div>
@@ -252,7 +252,7 @@ class TrangKiemDuyetCtrl
 			echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="" class="img-wrapper">
+                        <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'" class="img-wrapper">
                             <img class="pro-img" src="'.$tincanmua[$i]["hinhanh"].'">
                         </a>
                     </div>
@@ -260,7 +260,7 @@ class TrangKiemDuyetCtrl
                         <div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <a href="">'.$tincanmua[$i]["tensach"].'</a>
+                                    <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a>
                                     <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'d</p>
                                     <p class="buying">'.$this->Loadtrangthai($tincanmua[$i]["trangthai"]).'</p>
                                 </div>

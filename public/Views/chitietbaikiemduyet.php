@@ -17,8 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Itim&amp;display=swap" rel="stylesheet">
     <!--my style-->
-    <link rel="stylesheet" href="../../public/style/style.css">
-    <link rel="stylesheet" href="../../public/style/detailpost.css">
+    <link rel="stylesheet" href="public/style/style.css">
+    <link rel="stylesheet" href="public/style/detailpost.css">
 
 
     <title>Chi tiết bài đăng</title>
@@ -31,29 +31,17 @@
             <p class="detail-header">Chi tiết Tin Đăng</p>
         </div>
 
-        <div class="row info-item-buy">
-            <div class="col-md-4 col-lg-3 col-xl-3 col-12 text-center">
-                <img class="imgchitietMNCDT" src="" alt="">
-            </div>
-            <div class="col-md-8 col-lg-9 col-xl-9 col-12">
-
-                <div class="desc">
-                    <p class="name-buy">Truyen tranh Nhat Ban</p>
-                    <p class="price-buy">200,200đ</p>
-                    <p>ruyen tranh Nhat Ban ruyen tranh Nhat Ban ruyen tranh Nhat Ban</p>
-                    <p></p>
-                    <p></p>
-
-                    <p class="info-buy tx">Mô tả:ád á dầ fw àa ừa fwa fgaeh ag aeh ga egaeg gae geg eagfg d</p>
-
-                </div>
-            </div>
-        </div>
+        <?php 
+			require_once("private/Controllers/ChitiettinkiemduyetController.php");
+			$chiTietTinKiemDuyetCtrl = new ChiTietTinKiemDuyetCtrl();
+			$chiTietTinKiemDuyetCtrl->LoadChiTiet();
+		?>
         <div class="row contact">
             <div class="col-12 col-md-8 col-lg-8"></div>
             <div>
                 <button class="button btn-allow">Phê duyệt ✓</button>
                 <button class="button btn-reject">Từ chối ✕</button>
+				
             </div>
         </div>
     </div>

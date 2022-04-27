@@ -60,6 +60,16 @@ require_once("private/Modules/db_module.php");
 		}
 		return $baidangban[0];
 	}
-	 
+	public function LoadChiTietBDBanChoKD($idbaidangban){
+		$baidangban = array();
+		$link = "";
+		taoKetNoi($link);
+		$result = chayTruyVanTraVeDL($link,"SELECT * FROM tbl_baidangban AS bdban WHERE bdban.trangthai = 0 AND bdban.idbaidang = $idbaidangban");
+		while($rows = mysqli_fetch_assoc($result)){
+		array_push($baidangban, $rows);
+		break;
+		}
+		return $baidangban[0];
+	} 
  }
 ?>
