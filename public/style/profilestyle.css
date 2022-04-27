@@ -5,14 +5,39 @@
     color: aqua;
 }
 .profile{
-    display: flex;
-    margin-bottom: 10px;
-    background: linear-gradient(#002795, #ffd154);
+    margin-bottom: 30px;
+    background: linear-gradient(#517bef, #c0a14c, #fff);
 }
 .name{
-    font-size: 20px;
+    margin-top: 10px;
+    font-size: 24px;
     font-weight: 700;
 
+}
+.btn-baidang{
+    margin-top: 5px;
+    padding: 5px 12px;
+    font-size: 11px;
+}
+.btn-baidang:hover{
+    color: #000;
+}
+.txt-traded{
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.txt-amount{
+    font-size: 36px;
+    font-weight: 700;
+}
+.editinfo{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+.editinfo:hover{
+    color: #344883;
 }
 .info p{
     margin-bottom: 0.25rem;
