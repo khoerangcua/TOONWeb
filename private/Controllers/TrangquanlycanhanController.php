@@ -45,7 +45,8 @@ class TrangQuanLyCaNhanCtrl
                                 <div>
                                     <a href="index.php?to=chitiettincanban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
                                     <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'d</p>
-                                    <p class="buying">'.$this->LoadTrangThaiBaiDang($baidangban[$i]["trangthai"]).'</p>
+                                    <p class="buying">'.$baidangban[$i]["trangthai"].'</p>
+									<p>'.$this->LoadTrangThaiBaiDang(-1).'</p>
                                 </div>
                             </div>
                         </div>

@@ -5,4 +5,3 @@ $switchpagecontroler = new SwichPageControler();
 $switchpagecontroler->SwitchPage();
 ?>
 
-/ádfasdfadsf

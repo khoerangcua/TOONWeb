@@ -24,5 +24,31 @@ public function LoadDonDatHangFull(){
 		giaiPhongBoNho($link, $result);
 		return $dondathang;
 	 }
+public function LoadSoLuongDonBan($idnguoiban){
+		$link = "";
+		taoKetNoi($link);
+		$result = chayTruyVanTraVeDL($link,"SELECT tbl_dondathang.idnguoiban FROM tbl_dondathang WHERE idnguoiban = $idnguoiban");
+		if(isset($result)){
+			$soluongdonban = mysqli_num_rows($result);
+			giaiPhongBoNho($link, $result);
+			return $soluongdonban;	
+		}
+		else {
+			return(0);
+		}
+	 }
+public function LoadSoLuongDonMua($idnguoimua){
+		$link = "";
+		taoKetNoi($link);
+		$result = chayTruyVanTraVeDL($link,"SELECT tbl_dondathang.idnguoimua FROM tbl_dondathang WHERE idnguoimua = $idnguoimua");
+		if(isset($result)){
+			$soluongdonmua = mysqli_num_rows($result);
+			giaiPhongBoNho($link, $result);
+			return $soluongdonmua;	
+		}
+		else {
+			return(0);
+		}
+	 }
 }
 ?>

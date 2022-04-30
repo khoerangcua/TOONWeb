@@ -1,5 +1,5 @@
 <?php 
-require_once("../backend/private/mobules/db_module.php");
+require_once("private/Modules/db_module.php");
 class TaiKhoanModel{
 	
 	public function LoadThongTinTaiKhoan($idtaikhoan)

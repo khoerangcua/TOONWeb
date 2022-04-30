@@ -25,11 +25,14 @@ class SwichPageControler
 				case 'kiemduyet':
                     include_once("public/Views/danhsachbaidang.php");
                     break;
+				case 'chitietkiemduyet':
+                    include_once("public/Views/chitietbaikiemduyet.php");
+                    break;
 				case 'quanlycanhan':
                     include_once("public/Views/trangquanly.php");
                     break;
-				case 'chitietkiemduyet':
-                    include_once("public/Views/chitietbaikiemduyet.php");
+				case 'thongtincanhan':
+                    include_once("public/Views/trangcanhan.php");
                     break;
             }
         } else {
