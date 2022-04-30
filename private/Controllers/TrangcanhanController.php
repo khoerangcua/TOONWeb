@@ -7,7 +7,7 @@ class TrangCaNhanCtrl
 	{
 		$idtaikhoan = isset($_GET["id"]) ? $_GET["id"] : -1;
 		if ($idtaikhoan == -1 ){
-			 echo '<script>alert("Không tìm thấy bài đăng!")</script>';
+			 echo '<script>alert("Không tìm thấy tài khoản!")</script>';
 		}
 		else{
 			$taikhoanModel = new TaiKhoanModel();
@@ -22,7 +22,7 @@ class TrangCaNhanCtrl
                 
                 <p>'.$taikhoan['sdt'].'</p>
                 <p>'.$taikhoan['tinhthanh'].'</p>
-                <a href="index.php?to=quanlycanhan&xem=tinmua"><button class="button btn-baidang">Danh sach bai dang</button></a>
+                <a href="index.php?to=quanlycanhan&id='.$taikhoan['idtaikhoan'].'&xem=tinmua"><button class="button btn-baidang">Danh sach bai dang</button></a>
             </div>
 			';
 		}

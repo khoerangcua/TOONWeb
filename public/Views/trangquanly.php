@@ -27,32 +27,11 @@
         <h3 class="title">Quản lý bài đăng</h3>
         <div class="row">
             <div class="col-12 col-md-3 col-lg-2" style="padding: 0;">
-                <div class="manage wtb">
-                    <div class="menu">
-                    <span onClick="buymenutoggle(this)">Tin đăng mua ▼</span>
-                    </div>
-                    <ul id="dropmenu-buy">
-                        <li class="form-check menu-active">
-                            <a href="index.php?to=quanlycanhan&xem=tinmua">Bài đăng mua</a>
-                        </li>
-                        <li class="form-check">
-                            <a href="index.php?to=quanlycanhan&xem=donmua">Đơn đặt mua</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="manage wts">
-                    <div class="menu"> 
-                        <span onClick="sellmenutoggle(this)">Tin đăng bán ▼</span>
-                    </div>
-                    <ul id="dropmenu-sell">
-                        <li class="form-check">
-                            <a href="index.php?to=quanlycanhan&xem=tinban">Bài đăng bán</a>
-                        </li>
-                        <li class="form-check">
-                            <a href="index.php?to=quanlycanhan&xem=donban">Đơn bán hàng</a>
-                        </li>
-                    </ul>
-                </div>
+                <?php 
+					require_once("private/Controllers/TrangquanlycanhanController.php");
+					$trangquanlycanhanCtrl = new TrangQuanLyCaNhanCtrl();
+					$trangquanlycanhanCtrl->LoadDropDown();
+				?>
                 
             </div>
             <div class="col-12 col-md-9 col-lg-10">
