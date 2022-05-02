@@ -1,6 +1,5 @@
 .navbar a{
     text-decoration: none;
-    color: #000;
 }
 header{
     background-color: #ffd154;
@@ -13,8 +12,6 @@ header{
     color:#555;
 }
 .navbar{
-	display: flex;
-	align-items: center;
 	padding: 20px 0px;
 	z-index: 10;
 }
@@ -133,4 +130,48 @@ border: none;
 }
 .switch-page:hover{
     color: #3c559a;
+}
+.catogery p{
+    font-size: 16px;
+    text-transform: uppercase;
+    white-space: 2px;
+    
+}
+.catogery-item p{
+    text-transform: none;
+    margin: 5px 0;
+    font-size: 14px;
+}
+.catogery-item{
+    padding: 3px;
+    text-decoration: none;
+    color: #000;
+}
+.catogery-item:hover{
+    color: #000;
+}
+.card-inner{
+    padding: 5px 0 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.5s
+}
+
+.card-inner:hover {
+    transform: scale(1.05)
+}
+.heading{
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.heading a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
 }
