@@ -4,21 +4,21 @@ require_once( "private/models/tincanmua_model.php" );
 require_once( "private/models/dondathang_model.php" );
 class TrangQuanLyCaNhanCtrl {
   public function LoadThongTinTrang() {
-	  $idtaikhoan = $_GET["id"];
+    $idtaikhoan = $_GET[ "id" ];
     if ( isset( $idtaikhoan ) ) {
       if ( isset( $_GET[ "xem" ] ) ) {
         switch ( $_GET[ "xem" ] ) {
           case "tinban":
-            $this->LoadTinBanFull($idtaikhoan);
+            $this->LoadTinBanFull( $idtaikhoan );
             break;
           case "donban":
-            $this->LoadDonBanFull($idtaikhoan);
+            $this->LoadDonBanFull( $idtaikhoan );
             break;
           case "tinmua":
-            $this->LoadTinMuaFull($idtaikhoan);
+            $this->LoadTinMuaFull( $idtaikhoan );
             break;
           case "donmua":
-            $this->LoadDonMuaFull($idtaikhoan);
+            $this->LoadDonMuaFull( $idtaikhoan );
             break;
         }
       } else echo '<script>alert("Không tìm thấy bài đăng!")</script>';
@@ -57,7 +57,7 @@ class TrangQuanLyCaNhanCtrl {
       }
     }
   }
-  public function LoadTinMuaFull($idtaikhoan) {
+  public function LoadTinMuaFull( $idtaikhoan ) {
     $idtaikhoan = $_GET[ "id" ];
     if ( isset( $idtaikhoan ) == false ) {
       echo '<script>alert("Không tìm thấy bài đăng!")</script>';
@@ -88,15 +88,15 @@ class TrangQuanLyCaNhanCtrl {
       }
     }
   }
-  public function LoadDonBanFull($idtaikhoan) {
-	   $idtaikhoan = $_GET[ "id" ];
+  public function LoadDonBanFull( $idtaikhoan ) {
+    $idtaikhoan = $_GET[ "id" ];
     if ( isset( $idtaikhoan ) == false ) {
       echo '<script>alert("Không tìm thấy bài đăng!")</script>';
     } else {
-    $dondathangModel = new DonDatHangModel();
-    $dondathang = $dondathangModel->LoadDonBanHangFull($idtaikhoan);
-    for ( $i = 0; $i < count( $dondathang ); $i++ ) {
-      echo '
+      $dondathangModel = new DonDatHangModel();
+      $dondathang = $dondathangModel->LoadDonBanHangFull( $idtaikhoan );
+      for ( $i = 0; $i < count( $dondathang ); $i++ ) {
+        echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
                         <a href="index.php?to=chitietdondathang&id=' . $dondathang[ $i ][ "iddondathang" ] . '" class="img-wrapper">
@@ -116,18 +116,18 @@ class TrangQuanLyCaNhanCtrl {
                     </div>
                 </div>
 			';
+      }
     }
-	}
   }
-public function LoadDonMuaFull($idtaikhoan) {
-	   $idtaikhoan = $_GET[ "id" ];
+  public function LoadDonMuaFull( $idtaikhoan ) {
+    $idtaikhoan = $_GET[ "id" ];
     if ( isset( $idtaikhoan ) == false ) {
       echo '<script>alert("Không tìm thấy bài đăng!")</script>';
     } else {
-    $dondathangModel = new DonDatHangModel();
-    $dondathang = $dondathangModel->LoadDonMuaHangFull($idtaikhoan);
-    for ( $i = 0; $i < count( $dondathang ); $i++ ) {
-      echo '
+      $dondathangModel = new DonDatHangModel();
+      $dondathang = $dondathangModel->LoadDonMuaHangFull( $idtaikhoan );
+      for ( $i = 0; $i < count( $dondathang ); $i++ ) {
+        echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
                         <a href="index.php?to=chitietdondathang&id=' . $dondathang[ $i ][ "iddondathang" ] . '" class="img-wrapper">
@@ -147,8 +147,8 @@ public function LoadDonMuaFull($idtaikhoan) {
                     </div>
                 </div>
 			';
+      }
     }
-	}
   }
   public function LoadTrangThaiBaiDang( $trangthai ) {
     if ( $trangthai == 1 ) {
@@ -171,20 +171,20 @@ public function LoadDonMuaFull($idtaikhoan) {
       echo "Đã bị hủy";
     }
   }
-	public function LoadDropDown(){
-		$id = $_GET[ "id" ];
-    if ( isset( $id )) {
-		echo '
+  public function LoadDropDown() {
+    $id = $_GET[ "id" ];
+    if ( isset( $id ) ) {
+      echo '
 			<div class="manage wtb">
                     <div class="menu">
                     <span onClick="buymenutoggle(this)">Tin đăng mua ▼</span>
                     </div>
                     <ul id="dropmenu-buy">
                         <li class="form-check menu-active">
-                            <a href="index.php?to=quanlycanhan&id='.$id.'&xem=tinmua">Bài đăng mua</a>
+                            <a href="index.php?to=quanlycanhan&id=' . $id . '&xem=tinmua">Bài đăng mua</a>
                         </li>
                         <li class="form-check">
-                            <a href="index.php?to=quanlycanhan&id='.$id.'&xem=donmua">Đơn đặt mua</a>
+                            <a href="index.php?to=quanlycanhan&id=' . $id . '&xem=donmua">Đơn đặt mua</a>
                         </li>
                     </ul>
                 </div>
@@ -194,15 +194,15 @@ public function LoadDonMuaFull($idtaikhoan) {
                     </div>
                     <ul id="dropmenu-sell">
                         <li class="form-check">
-                            <a href="index.php?to=quanlycanhan&id='.$id.'&xem=tinban">Bài đăng bán</a>
+                            <a href="index.php?to=quanlycanhan&id=' . $id . '&xem=tinban">Bài đăng bán</a>
                         </li>
                         <li class="form-check">
-                            <a href="index.php?to=quanlycanhan&id='.$id.'&xem=donban">Đơn bán hàng</a>
+                            <a href="index.php?to=quanlycanhan&id=' . $id . '&xem=donban">Đơn bán hàng</a>
                         </li>
                     </ul>
                 </div>
 		';
-	}
-	}
+    }
+  }
 }
 ?>
