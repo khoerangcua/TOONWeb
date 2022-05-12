@@ -17,8 +17,8 @@ class TrangTimKiemCtrl
 							case "fillter":
 								$this->LoadTinBan();
 								break;
-							case "ortherpage":
-								$this->LoadTinBan();
+							case "kind":
+								$this->LoadTinBanTheoLoai();
 								break;
 							case "searchbar":
 								$this->LoadTinBan();
@@ -58,23 +58,7 @@ class TrangTimKiemCtrl
 		else echo '<script>alert("Không tìm thấy bài đăng!")</script>';
 		
 	}
-	private function TimKiemTuTrangKhac()
-    {
-        if (isset($_GET["orther"])) {
-            
-            switch ($_GET["orther"]) {
-                case 'loai':
-                    $this->LoadTinBanTheoLoai();
-                    break;
-                case 'xemthem':
-                    $this->LoadXemThem();
-                    break;
-                
-            }
-        } else {
-            $this->LoadTinBan();
-        }
-    }
+	
 	public function LoadTinBanTheoLoai()
 	{
 		 if (isset($_GET["value"])) {
@@ -85,26 +69,7 @@ class TrangTimKiemCtrl
 			$this->LoadTinBan();
 		}
 	}
-	public function LoadXemThem()
-	{
-		 if (isset($_GET["value"])) {
-			 switch ($_GET["value"]) {
-				case 'moi':
-					$this->LoadTinBanMoi();
-               		break;
-		 	}
-		 }
-		else{
-			$this->LoadTinBan();
-		}
-	}
-	public function LoadTinBanMoi()
-	{
-		$baidangbanModel = new BaiDangBanModel();
-		$baidangban = $baidangbanModel->LoadBaiDangBanMoi();
-		 
-		
-	}
+	
 	
 	public function LoadTinBan()
 	{
