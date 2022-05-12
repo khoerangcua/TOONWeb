@@ -19,8 +19,8 @@ class SwichPageControler
                 case 'chitietdondathang':
                     include_once("public/Views/chitietdonhangdadat.php");
                     break;
-				case 'trangchu':
-                    include_once("public/Views/trangchu.php");
+				case 'trangtimkiem':
+                    include_once("public/Views/trangtimkiem.php");
                     break;
 				case 'kiemduyet':
                     include_once("public/Views/danhsachbaidang.php");
@@ -33,6 +33,9 @@ class SwichPageControler
                     break;
 				case 'thongtincanhan':
                     include_once("public/Views/trangcanhan.php");
+                    break;
+				case 'trangchu':
+                    include_once("public/Views/homepage.php");
                     break;
             }
         } else {

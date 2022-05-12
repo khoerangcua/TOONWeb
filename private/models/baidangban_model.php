@@ -76,5 +76,40 @@ class BaiDangBanModel {
     }
     return $baidangban[ 0 ];
   }
+public function LoadBaiDangBanMoi() {
+	$ngay = date("Y-m-d",mktime(0,0,0, date("m")-2, date("d"), date("Y")));
+    $baidangban = array();
+    $link = "";
+    taoKetNoi( $link );
+    $result = chayTruyVanTraVeDL( $link, "SELECT * FROM tbl_baidangban AS bdban WHERE bdban.trangthai = 1 AND bdban.thoigian >= '$ngay'" );
+    while ( $rows = mysqli_fetch_assoc( $result ) ) {
+      array_push( $baidangban, $rows );
+    }
+    return $baidangban;
+  }
+	public function LoadDanhMucTheLoai() {
+    $theloai = array();
+    $link = "";
+    taoKetNoi( $link );
+    $result = chayTruyVanTraVeDL( $link, "SELECT DISTINCT theloai FROM tbl_baidangban ORDER BY theloai ASC" );
+    while ( $rows = mysqli_fetch_assoc( $result ) ) {
+      array_push( $theloai, $rows );
+
+    }
+    giaiPhongBoNho( $link, $result );
+    return $theloai;
+  }
+	public function LoadBaiDangBanTheoLoai($theloai) {
+    $baidangban = array();
+    $link = "";
+    taoKetNoi( $link );
+    $result = chayTruyVanTraVeDL( $link, "SELECT * FROM tbl_baidangban WHERE tbl_baidangban.trangthai = -1 AND tbl_baidangban.theloai=$theloai" );
+    while ( $rows = mysqli_fetch_assoc( $result ) ) {
+      array_push( $baidangban, $rows );
+
+    }
+    giaiPhongBoNho( $link, $result );
+    return $baidangban;
+  }
 }
 ?>
