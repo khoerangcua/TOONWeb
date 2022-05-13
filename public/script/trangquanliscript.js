@@ -3,8 +3,8 @@ var sellmenu = document.getElementById('dropmenu-sell');
 var control = document.getElementsByClassName('control-menu');
 
 
-buymenu.style.display = "none";
-sellmenu.style.display = "none";
+buymenu.style.display = "block";
+sellmenu.style.display = "block";
 
 function sellmenutoggle(inn){
     if(sellmenu.style.display == "none"){
