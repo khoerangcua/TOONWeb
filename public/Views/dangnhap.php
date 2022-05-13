@@ -54,7 +54,7 @@
                                     <a href='' class='forgot'>Quên mật khẩu?</a>
                                 </div>
                                 <button type='submit' class='login-btn mb-4'>Đăng nhập</button>
-                                <p class='login-signup'>Chưa có tài khoản? <a href='./?to=signup'>Đăng ký tại đây</a></p>
+                                <p class='login-signup'>Chưa có tài khoản? <a href=''>Đăng ký tại đây</a></p>
                             </form>
                         </div> 
                     </div>
