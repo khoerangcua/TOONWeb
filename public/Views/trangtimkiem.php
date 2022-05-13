@@ -146,9 +146,9 @@
             <div class="col-lg-10 col-md-10 col-12">
                 <div class="row pro-list">
                     <?php 
-					require_once("private/Controllers/TrangchuController.php");
-					$trangchuCtrl = new TrangChuCtrl();
-					$trangchuCtrl->LoadBaiDangTrangChu();
+					require_once("private/Controllers/TrangtimkiemController.php");
+					$trangtimkiemCtrl = new TrangTimKiemCtrl();
+					$trangtimkiemCtrl->LoadTrangTimKiem();
 					?>
                 </div>
             </div>

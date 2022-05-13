@@ -1,78 +1,40 @@
 <?php 
 require_once("private/models/baidangban_model.php");
-require_once("private/models/tincanmua_model.php");
-class TrangChuCtrl
-{
-	public function LoadBaiDangTrangChu()
-	{
-		if (isset($_GET["xem"])) 
-		{
-			switch($_GET["xem"])
-			{
-				case "ban":
-					$this->LoadTinBan();
-					break;
-				case "":
-					$this->LoadTinBan();
-					break;
-				case "mua":
-					$this->LoadTinMua();
-					break;
-			}	
-		}
-		else echo '<script>alert("Không tìm thấy bài đăng!")</script>';
-		
-	}
+class TrangChuCtrl{
 	
-	public function LoadTinBan()
+	public function LoadHangMoi($soluonghienthi)
 	{
 		$baidangbanModel = new BaiDangBanModel();
-		$baidangban = $baidangbanModel->LoadBaiDangBanDaDuyet();
-			
-		echo '<a href="index.php?to=trangchu&xem=mua" class="switch-page">Bạn đang muốn mua vài cuốn sách? Nhấp vào <b>đây</b> </a>';
-		for($i = 0; $i < count($baidangban); $i++){
+		$baidangban = $baidangbanModel->LoadBaiDangBanMoi();
+		for($i = 0; $i < $soluonghienthi & $i < count($baidangban); $i++){
 			echo '
-			
 				<div class="col-lg-3 col-md-6 col-6 products">
-                        <div class="pro-img">
-                            <a href="index.php?to=chitiettincanban&id='.$baidangban[$i]["idbaidang"].'">
-                                <img class="pro-img pro-img-1" src="'.$baidangban[$i]["diachianh"].'">
-                            </a>
-                        </div>
-                        <div class="pro-detail">
-                            <h6 class="pro-name"><a href="index.php?to=chitiettincanban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a></h6>
-                            <div class="pro-price">
-                                <p class="pro-price sale">'.$baidangban[$i]["gia"].'₫</p>
-                            </div>
-                        </div>
-
+                    <div class="pro-img">
+                        <a href="index.php?to=chitiettincanban&id='.$baidangban[$i]["idbaidang"].'">
+                            <img class="pro-img pro-img-1" src="'.$baidangban[$i]["diachianh"].'">
+                        </a>
                     </div>
+                    <div class="pro-detail">
+                        <h6 class="pro-name"><a href="index.php?to=chitiettincanban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a></h6>
+                        <div class="pro-price">
+                            <p class="pro-price sale">'.$baidangban[$i]["gia"].'₫</p>
+                        </div>
+                    </div>
+                </div>
 			';
-			
 		}
-		
 	}
-	public function LoadTinMua()
-	{
-		$tincanmuaModel = new TinCanMuaModel();
-		$tincanmua = $tincanmuaModel->LoadTinCanMuaDaDuyet();
-		echo '<a href="index.php?to=trangchu&xem=ban" class="switch-page">Bạn đang có sách muốn bán? Nhấp vào <b>đây</b> </a>';
-		for($i = 0; $i < count($tincanmua); $i++){
+	public function LoadDanhMuc(){
+		$baidangbanModel = new BaiDangBanModel();
+		$danhmuc = $baidangbanModel->LoadBaiDangBanMoi();
+		for($i = 0; $i < count($danhmuc); $i++){
 			echo '
-				<div class="col-lg-3 col-md-6 col-6 products">
-                        <div class="pro-img">
-                            <a href="index.php?to=chitiettincanmua&id='.$tincanmua[$i]["idtincanmua"].'">
-                                <img class="pro-img pro-img-1" src="'.$tincanmua[$i]["hinhanh"].'">
-                            </a>
-                        </div>
-                        <div class="pro-detail">
-                            <h6 class="pro-name"><a href="index.php?to=chitiettincanmua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a></h6>
-                            <div class="pro-price">
-                                <p class="pro-price sale">'.$tincanmua[$i]["giamax"].'₫</p>
-                            </div>
-                        </div>
-
+				<a class="col-4 col-md-3 col-lg-2 catogery-item"  href="">
+                    <div class="card-inner align-items-center">
+                        
+                        <p>'.$danhmuc[$i]["theloai"].'</p>
                     </div>
+                </a>
 			';
 		}
 	}
