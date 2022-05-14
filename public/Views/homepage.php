@@ -79,15 +79,27 @@
             </div>
         </div>
         <div class="view-list">
-            <div class="heading">
-                <h3 class="text-uppercase">Hàng mới</h3>
-                <a class="more" href="">Xem thêm</a>
+            <div class="heading row" align="center">
+				<div class="col-md-6">
+					
+					<a href="?to=trangchu&xem=mua">
+						<button class="" type="button" style="align-content: center">Thuận Mua</button>
+					</a>
+				</div>
+				<div class="col-md-6">
+					
+					<a href="?to=trangchu&xem=ban">
+						<button class="" type="button" style="align-content: center">Vừa Bán</button>	
+					</a>
+				</div>
+                <!--<h3 class="text-uppercase">Hàng mới</h3>
+                <a class="more" href="">Xem thêm</a>-->
             </div>
             <div class="row pro-list">
                 <?php 
 					require_once("private/Controllers/TrangchuController.php");
 					$trangchuCtrl = new TrangChuCtrl();
-					$trangchuCtrl->LoadHangMoi(8);
+					$trangchuCtrl->LoadBaiDangTrangChu();
 				?>
             </div>
 

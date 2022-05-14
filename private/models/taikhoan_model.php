@@ -15,6 +15,7 @@ class TaiKhoanModel
         }
         return $khachhanginfor[0];
     }
+	
 
     public function DangNhap($tendangnhap, $matkhau)
     {

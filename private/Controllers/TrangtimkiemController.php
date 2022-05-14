@@ -3,13 +3,24 @@ require_once("private/models/baidangban_model.php");
 require_once("private/models/tincanmua_model.php");
 class TrangTimKiemCtrl
 {
+	public function LoadLoaiLoc(){
+		if($_GET["xem"] == "ban"){
+			echo("<p>Ban</p>");
+			return "ban";
+	
+		}
+		else{
+			echo("<p>Mua</p>");
+			return "mua";
+		}
+	}
 	public function LoadTrangTimKiem()
 	{
 		if (isset($_GET["xem"])) 
 		{
 			switch($_GET["xem"])
 			{
-				case "mua":{
+				case "ban":{
 					if (isset($_GET["from"])) 
 					{
 						switch($_GET["from"])
@@ -31,7 +42,7 @@ class TrangTimKiemCtrl
 					}
 				}
 					
-				case "ban":{
+				case "mua":{
 					if (isset($_GET["from"])) 
 					{
 						switch($_GET["from"])
@@ -60,7 +71,7 @@ class TrangTimKiemCtrl
 	}
 	public function LoadTinBanTheoFillter()
 	{
-		if($_GET["xem"] == "mua"){
+		if($_GET["xem"] == "ban"){
 			$tinhthanh = isset($_GET["idtinhthanh"]) ? $_GET["idtinhthanh"] : -1;
         	$domoi = isset($_GET["domoi"]) ? $_GET["domoi"] : -1;
         	$gia = isset($_GET["gia"]) ? $_GET["gia"] : -1;
@@ -130,7 +141,7 @@ class TrangTimKiemCtrl
 	}
 	public function LoadTinMuaTheoFillter()
 	{
-		if($_GET["xem"] == "ban"){
+		if($_GET["xem"] == "mua"){
 		$tinhthanh = isset($_GET["idtinhthanh"]) ? $_GET["idtinhthanh"] : -1;
         $domoi = isset($_GET["domoi"]) ? $_GET["domoi"] : -1;
         $gia = isset($_GET["gia"]) ? $_GET["gia"] : -1;
@@ -158,7 +169,7 @@ class TrangTimKiemCtrl
 	{
 		if(isset($_GET["key"])){
 			$tincanmuaModel = new TinCanMuaModel();
-			$tincanmua = $tincanmuaModel->LoadBaiDangTuThanhTimKiem();
+			$tincanmua = $tincanmuaModel->LoadBaiDangTuThanhTimKiem($_GET["key"]);
 			$this->LoadTinMua($tincanmua);
 		}
 		else{
