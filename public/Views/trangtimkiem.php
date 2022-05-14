@@ -28,12 +28,21 @@
         <div class="container">
             <div class="navbar">
                 <a style="font-size: 24px" href="index.php?to=trangchu&xem=ban"><img src="public/images/275225020_3180982448841648_1157249981496616579_n.png" width="100px">TOON</a>
-                <div class="m-auto searchbar" id="search-bar">
-                    <form class="d-flex justify-content-center">
-                        <input type="text" name="key" class="search-box" id="searchbar" placeholder="Tìm kiếm">
-
-                    </form>
-                </div>
+                <div class="searchbar">
+                	<form class="d-flex justify-content-center px-5" >
+                   		<div class="search"> 
+							<input type="hidden" name="to" value="timkiem">
+							<input type="hidden" name="xem" value="ban">
+                			<input type="hidden" name="from" value="searchbar">
+							<input type="text" class="search-input" placeholder="Bạn cần tìm gì?.." name="key"> 
+							<button type="submit" class="search-icon">	
+								<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                	<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            	</svg> 
+							</button> 
+						</div>
+                	</form>
+            	</div>
                 <div class="navbar action-menu">
                     <div>
                         <a href="../page/?to=login" title="Tài khoản">
@@ -57,11 +66,13 @@
         <div class="row">
             <div class="col-lg-2 col-12 col-md-2">
                 <div class="d-xxl-none d-xl-none d-lg-none d-md-none filter-heading filter-control" onClick="filtertoogle(this)">
+					
                     <span class="">Bộ lọc ▲</span>
                 </div>
                 <form action="./" method="get" id="filter">
-                    <input type="hidden" name="to" value="search">
-                    <input type="hidden" name="from" value="self">
+                    <input type="hidden" name="to" value="timkiem">
+					<input type="hidden" name="xem" value="ban">
+                    <input type="hidden" name="from" value="fillter">
 
                     <div class="filter">
                         <div class="filter-places">
@@ -69,19 +80,19 @@
                             <span class="filter-control filter-select" onClick="filterplacestoggle(this)">-</span>
                             <ul id="filter-places-items">
                                 <li class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="" value="1" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="idtinhthanh[]" value="1" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Hà Nội
                                     </label>
                                 </li>
                                 <li class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="" value="2" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="idtinhthanh[]" value="2" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         TP.Hồ Chí Minh
                                     </label>
                                 </li>
                                 <li class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="" value="3" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="idtinhthanh[]" value="3" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Đà Nẵng
                                     </label>
@@ -96,19 +107,19 @@
                             <span class="filter-control filter-select" onClick="filtercondtoggle(this)">-</span>
                             <ul id="filter-condition-items">
                                 <li class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="" value="1" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="domoi[]" value=">80" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
-                                        90%
+                                        Trên 80%
                                     </label>
                                 </li>
                                 <li class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="" value="2" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="domoi[]" value="BETWEEN 50 AND 80" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
-                                        50% - 90%
+                                        50% - 80%
                                     </label>
                                 </li>
                                 <li class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="" value="3" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="domoi[]" value="<50" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Dưới 50%
                                     </label>
@@ -121,26 +132,27 @@
                             <span class="filter-control filter-select" onClick="filterpricetoggle(this)">-</span>
                             <ul id="filter-price-items">
                                 <li class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="" value=" < 200000 " id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="gia[]" value=" > 500000 " id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
-                                        Dưới 200,000₫
+                                        Trên 500,000₫
                                     </label>
                                 </li>
                                 <li class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="" value="BETWEEN 200000 AND 500000" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="gia[]" value=" BETWEEN 200000 AND 500000 " id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         200,000₫ - 500,000₫
                                     </label>
                                 </li>
                                 <li class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="" value="> 500000" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="gia[]" value=" < 200000 " id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
-                                        Trên 500,000₫
+                                        Dưới 200,000₫
                                     </label>
                                 </li>
                             </ul>
                         </div>
                     </div>
+					<button class="btn-close-white" type="submit">Lọc</button>
                 </form>
             </div>
             <div class="col-lg-10 col-md-10 col-12">

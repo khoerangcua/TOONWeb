@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php 
+	require_once("private/Controllers/TrangchuController.php");
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,16 +30,24 @@
         <div class="navbar">
             <div class="page-icon">
                 <a href="">
-                    <img class="page-logo" src="resource/275415790_351273863444344_4713147307608182994_n.jpg">
+                    <img class="page-logo" src="public/resource/275415790_351273863444344_4713147307608182994_n.jpg">
                 </a>
                 <a class="page-name d-none d-md-inline-block d-lg-inline-block" href="">TOON</a>
             </div>
             <div class="searchbar">
-                <div class="d-flex justify-content-center px-5">
-                    <div class="search"> <input type="text" class="search-input" placeholder="Bạn cần tìm gì?.." name=""> <a href="#" class="search-icon"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <form class="d-flex justify-content-center px-5" >
+                    <div class="search"> 
+						<input type="hidden" name="to" value="timkiem">
+						<input type="hidden" name="xem" value="ban">
+                		<input type="hidden" name="from" value="searchbar">
+						<input type="text" class="search-input" placeholder="Bạn cần tìm gì?.." name="key"> 
+						<button type="submit" class="search-icon">	
+							<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                            </svg> </a> </div>
-                </div>
+                            </svg> 
+						</button> 
+					</div>
+                </form>
             </div>
             <div class="action-bar">
                 <a href="?to=dangnhap">
@@ -65,7 +75,7 @@
 					require_once("private/Controllers/TrangchuController.php");
 					$trangchuCtrl = new TrangChuCtrl();
 					$trangchuCtrl->LoadDanhMuc();
-					?>
+				?>
             </div>
         </div>
         <div class="view-list">
@@ -78,230 +88,11 @@
 					require_once("private/Controllers/TrangchuController.php");
 					$trangchuCtrl = new TrangChuCtrl();
 					$trangchuCtrl->LoadHangMoi(8);
-					?>
+				?>
             </div>
 
 
-            <div class="heading">
-                <h3 class="text-uppercase">Hàng giảm giá</h3>
-                <a class="more" href="">Xem thêm</a>
-            </div>
-            <div class="row pro-list">
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="heading">
-                <h3 class="text-uppercase">Hàng hiếm</h3>
-                <a class="more" href="">Xem thêm</a>
-            </div>
-            <div class="row pro-list">
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-6 products">
-                    <div class="pro-img">
-                        <a href="">
-                            <img class="pro-img pro-img-1" src="../resource/nhung_vu_ky_an_cua_sherlock_holmestb_1_2020_05_30_12_53_10.jpg">
-                        </a>
-                    </div>
-                    <div class="pro-detail">
-                        <h6 class="pro-name"><a href="">Ma Gaming</a></h6>
-                        <div class="pro-price">
-                            <p class="pro-price sale">200,440₫</p>
-                        </div>
-                    </div>
-                </div>
+            
             </div>
         </div>
     </div>

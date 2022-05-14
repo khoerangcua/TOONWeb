@@ -19,7 +19,7 @@ class SwichPageControler
                 case 'chitietdondathang':
                     include_once("public/Views/chitietdonhangdadat.php");
                     break;
-				case 'trangtimkiem':
+				case 'timkiem':
                     include_once("public/Views/trangtimkiem.php");
                     break;
 				case 'kiemduyet':

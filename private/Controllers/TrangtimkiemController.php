@@ -9,74 +9,104 @@ class TrangTimKiemCtrl
 		{
 			switch($_GET["xem"])
 			{
-				case "ban":{
-					if (isset($_GET["from"])) 
-					{
-						switch($_GET["from"])
-						{
-							case "fillter":
-								$this->LoadTinBan();
-								break;
-							case "kind":
-								$this->LoadTinBanTheoLoai();
-								break;
-							case "searchbar":
-								$this->LoadTinBan();
-								break;
-						}
-					}
-					else{
-						$this->LoadTinBan();
-						break;
-					}
-				}
-					
 				case "mua":{
 					if (isset($_GET["from"])) 
 					{
 						switch($_GET["from"])
 						{
 							case "fillter":
-								$this->LoadTinMua();
+								$this->LoadTinBanTheoFillter();
 								break;
-							case "otherpage":
-								$this->LoadTinMua();
+							case "kind":
+								$this->LoadTinBanTheoLoai();
 								break;
 							case "searchbar":
-								$this->LoadTinMua();
+								$this->LoadTinBanTuThanhTimKiem();
 								break;
 						}
 					}
 					else{
-						$this->LoadTinMua();
+						$this->LoadTinBanfull();
+						break;
+					}
+				}
+					
+				case "ban":{
+					if (isset($_GET["from"])) 
+					{
+						switch($_GET["from"])
+						{
+							case "fillter":
+								$this->LoadTinMuaTheoFillter();
+								break;
+							case "kind":
+								$this->LoadTinMuaTheoLoai();
+								break;
+							case "searchbar":
+								$this->LoadTinMuaTuThanhTimKiem();
+								break;
+						}
+					}
+					else{
+						$this->LoadTinMuaFull();
 						break;
 					}
 				}
 					
 			}	
 		}
-		else echo '<script>alert("Không tìm thấy bài đăng!")</script>';
+		
+		
+	}
+	public function LoadTinBanTheoFillter()
+	{
+		if($_GET["xem"] == "mua"){
+			$tinhthanh = isset($_GET["idtinhthanh"]) ? $_GET["idtinhthanh"] : -1;
+        	$domoi = isset($_GET["domoi"]) ? $_GET["domoi"] : -1;
+        	$gia = isset($_GET["gia"]) ? $_GET["gia"] : -1;
+			$baidangban = array();
+			$baidangbanModel = new BaiDangBanModel();
+			$baidangban = $baidangbanModel->LoadBaiDangBanFillter($tinhthanh, $domoi, $gia);
+			$this->LoadTinBan($baidangban);
+		}
 		
 	}
 	
 	public function LoadTinBanTheoLoai()
 	{
-		 if (isset($_GET["value"])) {
+		 if (isset($_GET["idloai"])) {
 			$baidangbanModel = new BaiDangBanModel();
-			$baidangban = $baidangbanModel->LoadBaiDangBanTheoLoai($_GET["value"]);
+			$baidangban = $baidangbanModel->LoadBaiDangBanTheoLoai($_GET["idloai"]);
+			 $this->LoadTinBan($baidangban);
 		 }
 		else{
-			$this->LoadTinBan();
+			$this->LoadTinBanfull();
 		}
 	}
+	public function LoadTinBanTuThanhTimKiem(){
+		if (isset($_GET["key"])) {
+			$baidangbanModel = new BaiDangBanModel();
+			$baidangban = $baidangbanModel->LoadBaiDangTuThanhTimKiem($_GET["key"]);
+			 $this->LoadTinBan($baidangban);
+		 }
+		else{
+			echo "Không có kết quả!";
+			
+		}
+		
+	}
 	
-	
-	public function LoadTinBan()
+	public function LoadTinBanfull()
 	{
 		$baidangbanModel = new BaiDangBanModel();
 		$baidangban = $baidangbanModel->LoadBaiDangBanDaDuyet();
 			
-		echo '<a href="index.php?to=trangtimkiem&xem=mua" class="switch-page">Bạn đang muốn mua vài cuốn sách? Nhấp vào <b>đây</b> </a>';
+		
+		$this->LoadTinBan($baidangban);
+		
+	}
+	public function LoadTinBan($baidangban){
+		echo '<a href="index.php?to=timkiem&xem=mua" class="switch-page">Bạn muốn ai đang cần mua sách? Hãy nhấp vào <b>đây</b> </a>';
 		for($i = 0; $i < count($baidangban); $i++){
 			echo '
 			
@@ -97,13 +127,57 @@ class TrangTimKiemCtrl
 			';
 			
 		}
+	}
+	public function LoadTinMuaTheoFillter()
+	{
+		if($_GET["xem"] == "ban"){
+		$tinhthanh = isset($_GET["idtinhthanh"]) ? $_GET["idtinhthanh"] : -1;
+        $domoi = isset($_GET["domoi"]) ? $_GET["domoi"] : -1;
+        $gia = isset($_GET["gia"]) ? $_GET["gia"] : -1;
+		$tincanmua = array();
+		$tincanmuaModel = new TinCanMuaModel();
+		$tincanmua = $tincanmuaModel->LoadTinCanMuaFillter($tinhthanh, $domoi, $gia);
+		$this->LoadTinmua($tincanmua);
+		}
 		
 	}
-	public function LoadTinMua()
+	
+	public function LoadTinMuaTheoLoai()
+	{
+		 if (isset($_GET["idloai"])) {
+			$tincanmuaModel = new TinCanMuaModel();
+			$tincanmua = $tincanmuaModel->LoadTinCanMuaTheoLoai($_GET["idloai"]);
+			 $this->LoadTinMua($tincanmua);
+		 }
+		else{
+			echo "Không có kết quả!";
+		}
+	}
+	
+	public function LoadTinMuaTuThanhTimKiem()
+	{
+		if(isset($_GET["key"])){
+			$tincanmuaModel = new TinCanMuaModel();
+			$tincanmua = $tincanmuaModel->LoadBaiDangTuThanhTimKiem();
+			$this->LoadTinMua($tincanmua);
+		}
+		else{
+			echo "Không có kết quả!";
+			
+		}
+		
+	}
+	
+	public function LoadTinMuaFull()
 	{
 		$tincanmuaModel = new TinCanMuaModel();
 		$tincanmua = $tincanmuaModel->LoadTinCanMuaDaDuyet();
-		echo '<a href="index.php?to=trangtimkiem&xem=ban" class="switch-page">Bạn đang có sách muốn bán? Nhấp vào <b>đây</b> </a>';
+		$this->LoadTinMua($tincanmua);
+	}
+	
+	public function LoadTinMua($tincanmua)
+	{
+		echo '<a href="index.php?to=timkiem&xem=ban" class="switch-page">Bạn muốn mua vài cuốn sách? Hãy nhấp vào <b>đây</b> </a>';
 		for($i = 0; $i < count($tincanmua); $i++){
 			echo '
 				<div class="col-lg-3 col-md-6 col-6 products">

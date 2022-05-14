@@ -26,13 +26,13 @@ class TrangChuCtrl{
 	}
 	public function LoadDanhMuc(){
 		$baidangbanModel = new BaiDangBanModel();
-		$danhmuc = $baidangbanModel->LoadBaiDangBanMoi();
+		$danhmuc = $baidangbanModel->LoadDanhMucTheLoai();
 		for($i = 0; $i < count($danhmuc); $i++){
 			echo '
-				<a class="col-4 col-md-3 col-lg-2 catogery-item"  href="">
+				<a class="col-4 col-md-3 col-lg-2 catogery-item"  href="index.php?to=timkiem&xem=ban&from=kind&idloai='.$danhmuc[$i]["idtheloai"].'">
                     <div class="card-inner align-items-center">
                         
-                        <p>'.$danhmuc[$i]["theloai"].'</p>
+                        <p>'.$danhmuc[$i]["tentheloai"].'</p>
                     </div>
                 </a>
 			';
