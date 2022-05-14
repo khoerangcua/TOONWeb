@@ -29,7 +29,6 @@
     $dangNhapController = new DangNhapController();
     $dangNhapController->HienThiTrangDangNhap();
     ?>
-
 </body>
 
 </html>
