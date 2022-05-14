@@ -71,9 +71,7 @@ class DangNhapController{
 
     private function HienThiGiaoDienDangNhapThanhCong(){
         echo"Danh nhap thanh cong  ";
-        $idtaikhoan = $_SESSION["idtaikhoan"];
-        echo $idtaikhoan;
-        //header('Location: /directory/mypage.php'); 
+        header('Location: ./?to=trangchu&xem=ban'); 
     }
     private function HienThiGiaoDienDangNhapThatBai(){
         echo"Dang nhap that bai";
