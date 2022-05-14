@@ -27,7 +27,7 @@ class DangKyController{
 
         if ($datontai == false && $matkhau == $nhaplaimatkhau) {
             $taiKhoanModel->DangKy($tendangnhap, $matkhau, $ho, $ten,$sodienthoai, $email);
-            $this->HienThiGiaoDienDangKyThanhCong();
+            //$this->HienThiGiaoDienDangKyThanhCong();
         }
         else{
             $this->HienThiGiaoDienDangKyThatBai();
@@ -41,7 +41,7 @@ class DangKyController{
         <div class='container'>
             <div class='row vh-100 justify-content-center align-items-center'>
                 <div class='col-sm-8 col-md-8 col-lg-6 shadow dky-ui'>
-                    <a class='row justify-content-center' href='./?to=trangchu'><img src='public/images/275225020_3180982448841648_1157249981496616579_n.png' class='icon'></a>
+                    <a class='row justify-content-center' href='./?to=trangchu'><img src='../public/images/275225020_3180982448841648_1157249981496616579_n.png' class='icon'></a>
                     <div class='row dky-header'>
                         <h3>đăng ký tài khoản</h3>
                     </div>

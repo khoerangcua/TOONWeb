@@ -55,9 +55,16 @@ class TaiKhoanModel
         $hoten = $ho . " " . $ten;
 
         chayTruyVanKhongTraVeDL($link, "INSERT INTO `tbl_taikhoan` VALUES (NULL, 
-                                                                    '$hoten', '$sodienthoai', '', '',
+                                                                    '$hoten', '$sodienthoai', '', 1,
                                                                     '$username', '$password', '$email', '', 'khach')"
                                                                     );
+        echo("dang ky thanh cong");
+        echo($username);
+        echo($password);
+        echo($ho);
+        echo($sodienthoai);
+        echo($email);
+        
     }
 
     public function kiemTraTonTaiTenDangNhap($tendangnhap){
