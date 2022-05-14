@@ -34,6 +34,12 @@ class SwichPageControler
 				case 'thongtincanhan':
                     include_once("public/Views/trangcanhan.php");
                     break;
+                case 'dangnhap':
+                    include_once("public/Views/dangnhap.php");
+                    break;
+                case 'dangky':
+                    include_once("public/Views/dangki.php");
+                    break;
 				case 'trangchu':
                     include_once("public/Views/homepage.php");
                     break;

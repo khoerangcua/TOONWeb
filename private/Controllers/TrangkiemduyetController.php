@@ -66,7 +66,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'d</p>
+                                    <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($baidangban[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'d</p>
+                                    <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($baidangban[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'d</p>
+                                    <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($baidangban[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -150,7 +150,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'d</p>
+                                    <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($tincanmua[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -177,7 +177,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'d</p>
+                                    <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($tincanmua[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'d</p>
+                                    <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($tincanmua[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -216,13 +216,13 @@ class TrangKiemDuyetCtrl
 	}
 	public function Loadtrangthai($trangthai){
 		if($trangthai == 1){
-			echo "Đã duyệt";
+			return "Đã duyệt";
 		}
 		elseif($trangthai == 0){
-			echo "Đang chờ duyệt";
+			return "Đang chờ duyệt";
 		}
 		else {
-			echo "Đã bị hủy";
+			return "Đã bị hủy";
 		}
 	}
 }
