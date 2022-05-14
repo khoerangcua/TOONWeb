@@ -18,51 +18,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!--my style-->
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/dangnhap.css">
+    <link rel="stylesheet" href="public/style/style.css">
+    <link rel="stylesheet" href="public/style/dangnhap.css">
 
 </head>
 
 <body>
-<div class='container'>
-            <div class='row vh-100 justify-content-center align-items-center'>
-                <div class='col-sm-9 col-md-9 col-lg-9 shadow login-ui'>
-                    <div class="row">
-                        <div class="col-5 text-center align-items-center">
-                         
-
-                            <a href=""><img class="logo-img" src="../images/275225020_3180982448841648_1157249981496616579_n.png"></a>
-                            </div>
-                        
-                        <div class="col-7">
-                            <div class='row login-header'>
-                                <h4>đăng nhập</h4>
-                            </div>
-                            <form method='post' class='login-form' action=''>
-                                <input type='hidden' name='dangnhap' value='true'>
-                                <div class='form-floating mb-4'>
-                                    <input type='text' name='tendangnhap' class='form-control' id='floatingInput' placeholder='Tên đăng nhập'>
-                                    <label for='floatingInput'>Tên đăng nhập</label>
-                                </div>
-                                <div class='form-floating mb-2'>
-                                    <input type='password' name='matkhau' class='form-control' id='floatingPassword' placeholder='Mật khẩu'>
-                                    <label for='floatingPassword'>Mật khẩu</label>
-                                </div>
-                                <div class='mb-4 form-check'>
-                                    <input type='checkbox' name='remember' class='form-check-input' id='exampleCheck1'>
-                                    <label class='form-check-label' for='exampleCheck1'>Ghi nhớ đăng nhập</label>
-                                    <a href='' class='forgot'>Quên mật khẩu?</a>
-                                </div>
-                                <button type='submit' class='login-btn mb-4'>Đăng nhập</button>
-                                <p class='login-signup'>Chưa có tài khoản? <a href='./?to=signup'>Đăng ký tại đây</a></p>
-                            </form>
-                        </div> 
-                    </div>
-                   
-                    
-                </div>
-            </div>
-	    </div>
+    <?php
+    include_once("private/Controllers/DangNhapController.php");
+    $dangNhapController = new DangNhapController();
+    $dangNhapController->HienThiTrangDangNhap();
+    ?>
 
 </body>
 
