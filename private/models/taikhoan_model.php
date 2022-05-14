@@ -59,11 +59,6 @@ class TaiKhoanModel
                                                                     '$username', '$password', '$email', '', 'fre')"
                                                                     );
         echo("dang ky thanh cong");
-        echo($username);
-        echo($password);
-        echo($ho);
-        echo($sodienthoai);
-        echo($email);
         
     }
 

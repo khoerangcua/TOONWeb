@@ -27,7 +27,7 @@ class DangKyController{
 
         if ($datontai == false && $matkhau == $nhaplaimatkhau) {
             $taiKhoanModel->DangKy($tendangnhap, $matkhau, $ho, $ten,$sodienthoai, $email);
-            //$this->HienThiGiaoDienDangKyThanhCong();
+            $this->HienThiGiaoDienDangKyThanhCong();
         }
         else{
             $this->HienThiGiaoDienDangKyThatBai();
