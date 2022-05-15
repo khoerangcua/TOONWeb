@@ -152,27 +152,28 @@ class TrangQuanLyCaNhanCtrl {
   }
   public function LoadTrangThaiBaiDang( $trangthai ) {
     if ( $trangthai == 1 ) {
-      echo "Đã duyệt";
+      return "Đã duyệt";
     } else {
       if ( $trangthai == 0 ) {
-        echo "Đang chờ duyệt";
+       return "Đang chờ duyệt";
       } else {
-        echo "Đã bị hủy";
+        return "Đã bị hủy";
       }
     }
   }
   public function LoadTrangThaiDonHang( $trangthai ) {
     if ( $trangthai == 1 ) {
-      echo "Đã thanh toán";
+      return "Đã thanh toán";
     } elseif ( $trangthai == 0 ) {
-      echo "Chưa thanh toán";
+      return "Chưa thanh toán";
     }
     else {
-      echo "Đã bị hủy";
+      return "Đã bị hủy";
     }
   }
   public function LoadDropDown() {
     $id = $_GET[ "id" ];
+	  $xem = $this->TrangThaiDropDown();
     if ( isset( $id ) ) {
       echo '
 			<div class="manage wtb">
@@ -180,10 +181,10 @@ class TrangQuanLyCaNhanCtrl {
                     <span onClick="buymenutoggle(this)">Tin đăng mua ▼</span>
                     </div>
                     <ul id="dropmenu-buy">
-                        <li class="form-check menu-active">
+                        <li class="form-check '.$xem.'">
                             <a href="index.php?to=quanlycanhan&id=' . $id . '&xem=tinmua">Bài đăng mua</a>
                         </li>
-                        <li class="form-check">
+                        <li class="form-check '.$xem.'">
                             <a href="index.php?to=quanlycanhan&id=' . $id . '&xem=donmua">Đơn đặt mua</a>
                         </li>
                     </ul>
@@ -193,10 +194,10 @@ class TrangQuanLyCaNhanCtrl {
                         <span onClick="sellmenutoggle(this)">Tin đăng bán ▼</span>
                     </div>
                     <ul id="dropmenu-sell">
-                        <li class="form-check">
+                        <li class="form-check '.$xem.'">
                             <a href="index.php?to=quanlycanhan&id=' . $id . '&xem=tinban">Bài đăng bán</a>
                         </li>
-                        <li class="form-check">
+                        <li class="form-check '.$xem.'">
                             <a href="index.php?to=quanlycanhan&id=' . $id . '&xem=donban">Đơn bán hàng</a>
                         </li>
                     </ul>
@@ -204,5 +205,23 @@ class TrangQuanLyCaNhanCtrl {
 		';
     }
   }
+	public function TrangThaiDropDown() {
+		$xem = $_GET["xem"];
+		
+		switch($xem){
+			case "tinmua":
+				return "menu-active";
+				break;
+			case "donmua":
+				return "menu-active";
+				break;
+			case "tinban":
+				return "menu-active";
+				break;
+			case "donban":
+				return "menu-active";
+				break;
+		}
+	}
 }
 ?>

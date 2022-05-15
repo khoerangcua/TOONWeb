@@ -65,6 +65,17 @@ class TinCanMuaModel {
     }
     return $tincanmua[ 0 ];
   }
+	public function LoadChiTietTCMuaChoKD( $idtincanmua ) {
+    $tincanmua = array();
+    $link = "";
+    taoKetNoi( $link );
+    $result = chayTruyVanTraVeDL( $link, "SELECT * FROM tbl_tincanmua WHERE tbl_tincanmua.trangthai = 0 AND tbl_tincanmua.idtincanmua = $idtincanmua" );
+    while ( $rows = mysqli_fetch_assoc( $result ) ) {
+      array_push( $tincanmua, $rows );
+      break;
+    }
+    return $tincanmua[ 0 ];
+  }
 	public function LoadTinCanMuaMoi() {
 	$ngay = date("Y-m-d",mktime(0,0,0, date("m")-2, date("d"), date("Y")));
     $tincanmua = array();

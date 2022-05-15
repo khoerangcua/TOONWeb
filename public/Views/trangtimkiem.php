@@ -31,7 +31,15 @@ require_once( "private/Controllers/TrangtimkiemController.php" );
         <form class="d-flex justify-content-center px-5" >
           <div class="search">
             <input type="hidden" name="to" value="timkiem">
-            <input type="hidden" name="xem" value="ban">
+            <?php
+		  		if($_GET["xem"] == "ban"){
+					echo"<input type='hidden' name='xem' value='ban'>";
+	
+				}
+				else{
+					echo"<input type='hidden' name='xem' value='mua'>";
+				}
+		  	?>
             <input type="hidden" name="from" value="searchbar">
             <input type="text" class="search-input" placeholder="Bạn cần tìm gì?.." name="key">
             <button type="submit" class="search-icon">
@@ -43,11 +51,10 @@ require_once( "private/Controllers/TrangtimkiemController.php" );
         </form>
       </div>
       <div class="navbar action-menu">
-        <div> <a href="../page/?to=login" title="Tài khoản">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-          </svg>
-          Đăng nhập </a> </div>
+        <?php 
+		  	$trangtimkiemCtrl = new TrangTimKiemCtrl();
+        	$trangtimkiemCtrl->LoadTaiKhoanHeader();
+		  ?>
         <div class="action-manage"> <a href="index.php?to=quanlycanhan&id=1&xem=tinmua" title="Quản lí tin">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
             <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z" />

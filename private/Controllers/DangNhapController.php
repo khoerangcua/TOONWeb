@@ -20,7 +20,7 @@ class DangNhapController{
                 <div class='col-sm-9 col-md-9 col-lg-9 shadow login-ui'>
                     <div class='row'>
                         <div class='col-5 text-center align-items-center'>
-                            <a href=''><img class='logo-img' src='../public/images/275225020_3180982448841648_1157249981496616579_n.png'></a>
+                            <a href='?to=trangchu&xem=ban'><img class='logo-img' src='public/images/275225020_3180982448841648_1157249981496616579_n.png'></a>
                         </div>
 
                         <div class='col-7'>
