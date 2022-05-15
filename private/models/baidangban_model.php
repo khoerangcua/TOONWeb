@@ -58,7 +58,7 @@ class BaiDangBanModel {
     $baidangban = array();
     $link = "";
     taoKetNoi( $link );
-    $result = chayTruyVanTraVeDL( $link, "SELECT * FROM (SELECT tbl_baidangban.*, tbl_taikhoan.anhnguoidung FROM tbl_baidangban INNER JOIN tbl_taikhoan ON tbl_baidangban.idtaikhoan = tbl_taikhoan.idtaikhoan) AS bdban WHERE bdban.idbaidang = $idbaidangban" );
+    $result = chayTruyVanTraVeDL( $link, "SELECT * FROM (SELECT bang2.*, tbl_theloai.tentheloai FROM (SELECT tbl_baidangban.*, tbl_taikhoan.anhnguoidung FROM tbl_baidangban INNER JOIN tbl_taikhoan ON tbl_baidangban.idtaikhoan = tbl_taikhoan.idtaikhoan) AS bang2 INNER JOIN tbl_theloai ON bang2.idtheloai = tbl_theloai.idtheloai ) AS bang1 WHERE bang1.idbaidang = $idbaidangban" );
     while ( $rows = mysqli_fetch_assoc( $result ) ) {
       array_push( $baidangban, $rows );
       break;

@@ -207,7 +207,6 @@ class TrangQuanLyCaNhanCtrl {
   }
 	public function TrangThaiDropDown() {
 		$xem = $_GET["xem"];
-		
 		switch($xem){
 			case "tinmua":
 				return "menu-active";

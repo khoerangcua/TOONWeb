@@ -7,7 +7,7 @@ class TaiKhoanModel
     {
         $link = "";
         taoKetNoi($link);
-        $result = chayTruyVanTraVeDL($link, "SELECT * FROM tbl_taikhoan WHERE tbl_taikhoan.idtaikhoan = $idtaikhoan");
+        $result = chayTruyVanTraVeDL($link, "SELECT * FROM(SELECT tbl_taikhoan.*, tbl_tinhthanh.tentinhthanh FROM tbl_taikhoan INNER JOIN tbl_tinhthanh ON tbl_taikhoan.idtinhthanh = tbl_tinhthanh.idtinhthanh ) AS bang WHERE bang.idtaikhoan = $idtaikhoan");
         $khachhanginfor = array();
         while ($row = mysqli_fetch_assoc($result)) {
             array_push($khachhanginfor, $row);

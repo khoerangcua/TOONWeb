@@ -31,10 +31,10 @@ class ChiTietTinCanMuaCtrl
 				
 						<div class="desc">
 							<p class="name-buy">'.$tincanmua["tensach"].'</p>
-							<p>Thể loại: '.$tincanmua["theloai"].'</p>
+							<p>Thể loại: '.$tincanmua["tentheloai"].'</p>
 							<p>Tác giả: '.$tincanmua["tacgia"].'</p>
 							<p class="price-buy">Giá tiền mong muốn: '.$tincanmua["giamin"].'đ - '.$tincanmua["giamax"].'đ</p>
-							<p>Chất lượng mong muốn: '.$tincanmua["chatluongmin"].' - '.$tincanmua["chatluongmax"].'</p>
+							<p>Chất lượng mong muốn: '.$tincanmua["chatluongmin"].'% - '.$tincanmua["chatluongmax"].'%</p>
 							<p>Số lượng: '.$tincanmua["soluong"].'</p>
 							<p class="info-buy tx">Mô tả: '.$tincanmua["mota"].'</p>
 						</div>
@@ -45,7 +45,7 @@ class ChiTietTinCanMuaCtrl
 				<div class="row contact">
 				<div class="info-buyer">
 					<button class="button contactbtn"> Lien he ngay</button>
-					<a href="" ><img class="img-buyer" src="'.$tincanmua["anhnguoidung"].'"></a>
+					<a href="?to=thongtincanhan&id='.$tincanmua["idtaikhoan"].'" ><img class="img-buyer" src="'.$tincanmua["anhnguoidung"].'"></a>
 					<div>
 
 					</div>
