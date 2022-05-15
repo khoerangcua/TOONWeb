@@ -32,7 +32,7 @@ class ChiTietBaiDangBanCtrl
 						<div class='desc'>
 							<p class='name-buy'>".$baidangban["tensach"]."</p>
 							<p>Tác giả: ".$baidangban["tacgia"]."</p>
-							<p>Thể loại: ".$baidangban["theloai"]."</p>
+							<p>Thể loại: ".$baidangban["tentheloai"]."</p>
 							<p class='price-buy'>Giá: ".$baidangban["gia"]."</p>
 							<p>Số lượng: ".$baidangban["soluong"]." </p>
 							
@@ -46,7 +46,7 @@ class ChiTietBaiDangBanCtrl
 					<div class='row contact'>
 						<div class='info-buyer'>
 							<button class='button contactbtn'>Liên hệ ngay</button>
-							<a href='' ><img class='img-buyer' src='".$baidangban["anhnguoidung"]."'></a>
+							<a href='?to=thongtincanhan&id=".$baidangban["idtaikhoan"]."' ><img class='img-buyer' src='".$baidangban["anhnguoidung"]."'></a>
 						<div>
 
 						</div>

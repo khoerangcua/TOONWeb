@@ -21,7 +21,7 @@ class TrangCaNhanCtrl
                     </svg></a></p> 
                 
                 <p>'.$taikhoan['sdt'].'</p>
-                <p>'.$taikhoan['tinhthanh'].'</p>
+                <p>'.$taikhoan['tentinhthanh'].'</p>
                 <a href="index.php?to=quanlycanhan&id='.$taikhoan['idtaikhoan'].'&xem=tinmua"><button class="button btn-baidang">Danh sach bai dang</button></a>
             </div>
 			';
