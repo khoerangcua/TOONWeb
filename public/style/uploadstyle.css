@@ -1,0 +1,28 @@
+
+.pro-img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.heading-upload{
+    margin: 40px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #002795;
+    text-align: center;
+}
+.pro-desc{
+    height: 130px !important;  
+}
+.btn-post{
+    float: right;
+    width: 50%; 
+    color: #fff;
+    background-color: #002795;
+}
+.btn-post:hover{
+    color: #002795;
+    background-color: #fff;
+    border-color: 0.2px solid #002795;
+}

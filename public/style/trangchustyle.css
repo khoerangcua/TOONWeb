@@ -5,6 +5,9 @@ header{
     background-color: #ffd154;
     margin-bottom: 1rem;
 }
+.page-logo2{
+    height:200px;
+}
 .action-menu a{
 	margin-left: 10px;
 }
