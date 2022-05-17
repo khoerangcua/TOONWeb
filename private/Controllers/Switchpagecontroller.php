@@ -43,9 +43,13 @@ class SwichPageControler
 				case 'trangchu':
                     include_once("public/Views/homepage.php");
                     break;
+				case 'upload':
+                    include_once("public/Views/upload.php");
+                    break;
             }
         } else {
-            include_once("public/Views/trangchu.php");
+			echo("lỗi");
+            //header("Location: ?to=trangchu&xem=ban");
         }
     }
 }

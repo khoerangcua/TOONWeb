@@ -204,5 +204,19 @@ public function LoadBaiDangBanMoi() {
       return $mangrong;
     }
   }
+	public function DangBaiBan($idtaikhoan,$tensach, $tacgia, $gia, $theloai, $chatluong, $soluong, $mota, $file)
+    {
+
+		$ngay = date("Y-m-d H:i:s",mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y")));
+        $link = null;
+        taoKetNoi($link);
+
+        chayTruyVanKhongTraVeDL($link, "INSERT INTO `tbl_baidangban` VALUES (NULL, '$idtaikhoan',
+                                                                    '$theloai', '$tensach', '$tacgia', '', '$mota',
+                                                                    '$gia', '$soluong', '$file', '$ngay', '0', '$chatluong')"
+                                                                    );
+        echo("Đăng bài thành công!");
+        
+    }
 }
 ?>

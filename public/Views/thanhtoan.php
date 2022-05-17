@@ -120,7 +120,7 @@
                                     <td class='product-image'>
                                         <div class='product-thumbnail'>
                                             <div class='thumbnail-wrapper'>
-                                                <img class='thumbnail-img' src='../images/275225020_3180982448841648_1157249981496616579_n.png'>
+                                                <img class='thumbnail-img' src='../resource/images/275225020_3180982448841648_1157249981496616579_n.png'>
                                             </div>
                                         </div>
                                     </td>
@@ -135,7 +135,7 @@
                                     <td class='product-image'>
                                         <div class='product-thumbnail'>
                                             <div class='thumbnail-wrapper'>
-                                                <img class='thumbnail-img' src='../images/275225020_3180982448841648_1157249981496616579_n.png'>
+                                                <img class='thumbnail-img' src='../resource/images/275225020_3180982448841648_1157249981496616579_n.png'>
                                             </div>
                                         </div>
                                     </td>
