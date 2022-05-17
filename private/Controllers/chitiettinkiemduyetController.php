@@ -94,8 +94,15 @@ class ChiTietTinKiemDuyetCtrl
 	public function LoadCNKiemDuyet(){
 		
 		if(isset($_GET["kduyet"])){
-			$this->PheDuyetTinBan();
-			echo"Kiem Duyet";
+			switch($_GET["xem"])
+			{
+				case "ban":
+					$this->PheDuyetTinBan();
+					break;
+				case "mua":
+					$this->PheDuyetTinMua();
+					break;
+			}	
 		}
 		else{
 			echo '
@@ -126,6 +133,29 @@ class ChiTietTinKiemDuyetCtrl
 					$baidangbanModel = new BaiDangBanModel();
 					$baidangbanModel->TuChoi($id_BDBan);
 					header("Location: ./?to=kiemduyet&xem=ban&duyet=da");
+					break;
+			}	
+			
+		}
+		
+	}
+	public function PheDuyetTinMua(){
+		$id_TCMua = isset($_GET["id"]) ? $_GET["id"] : -1;
+		if ($id_TCMua == -1 ){
+			 echo '<script>alert("Không tìm thấy bài đăng!")</script>';
+		}
+		else{
+			switch($_GET["kduyet"])
+			{
+				case "pduyet":
+					$tincanmuaModel = new TinCanMuaModel();
+					$tincanmuaModel->PheDuyet($id_TCMua);
+					header("Location: ./?to=kiemduyet&xem=ban&duyet=da");
+					break;
+				case "huy":
+					$tincanmuaModel = new TinCanMuaModel();
+					$tincanmuaModel->TuChoi($id_TCMua);
+					header("Location: ./?to=kiemduyet&xem=mua&duyet=da");
 					break;
 			}	
 			

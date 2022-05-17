@@ -224,5 +224,15 @@ class TinCanMuaModel {
         	
         
     }
+	public function PheDuyet($idbaidang){
+		$link = null;
+        taoKetNoi($link);
+		chayTruyVanKhongTraVeDL($link, "UPDATE tbl_tincanmua SET trangthai = '1' WHERE idtincanmua = $idbaidang");
+	}
+	public function TuChoi($idbaidang){
+		$link = null;
+        taoKetNoi($link);
+		chayTruyVanKhongTraVeDL($link, "UPDATE tbl_tincanmua SET trangthai = '-1' WHERE idtincanmua = $idbaidang");
+	}
 }
 ?>
