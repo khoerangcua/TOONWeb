@@ -44,7 +44,7 @@ class ThanhToanController{
                                 </svg> Thông tin giao hàng</h4>
                             <div class='col-12'>
                                 <div class='form-floating mb-2'>
-                                    <input type='text' value='".$thongTinTaiKhoan["tentaikhoan"]."' class='form-control' id='floatingInput' placeholder='Họ và tên'>
+                                    <input type='text' value='".$thongTinTaiKhoan["hoten"]."' class='form-control' id='floatingInput' placeholder='Họ và tên'>
                                     <label for='floatingInput'>Họ và tên</label>
                                 </div>
                             </div>
@@ -180,7 +180,7 @@ class ThanhToanController{
     }
 
     private function DatHangThanhCong(){
-        echo("dat hang thanh cong");
+        header("Location: ./?to=trangchu&xem=ban");
     }
 }
 ?>

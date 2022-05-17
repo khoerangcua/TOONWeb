@@ -51,8 +51,7 @@ class SwichPageControler
                     break;
             }
         } else {
-			echo("lỗi");
-            //header("Location: ?to=trangchu&xem=ban");
+            header("Location: ?to=trangchu&xem=ban");
         }
     }
 }

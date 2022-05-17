@@ -69,8 +69,27 @@ class DangNhapController{
     }
 
     private function HienThiGiaoDienDangNhapThanhCong(){
-        echo"Danh nhap thanh cong  ";
-        header('Location: ./?to=trangchu&xem=ban'); 
+
+        $idTaiKhoan = $_SESSION["idtaikhoan"];
+        $taiKhoanModel = new TaiKhoanModel();
+        $taikhoan = $taiKhoanModel->LoadThongTinTaiKhoan($idTaiKhoan);
+
+        
+        if ($taikhoan["quyen"] == "fre") {
+            header('Location: ./?to=trangchu&xem=ban');
+            echo("da vo");
+            return;
+           
+        }
+        else{
+            
+        }
+
+        if ($taikhoan["quyen"] == "add") {
+           
+        }
+        
+         
     }
     private function HienThiGiaoDienDangNhapThatBai(){
         echo"Dang nhap that bai";
