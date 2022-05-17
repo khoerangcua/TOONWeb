@@ -28,16 +28,13 @@ class ChiTietBaiDangBanCtrl
 						<img class='imgchitietMNCDT' src='".$baidangban["diachianh"]."' alt='Hình ảnh sách cần mua'>
 					</div>
 					<div class='col-md-8 col-lg-9 col-xl-9 col-12'>
-				
 						<div class='desc'>
 							<p class='name-buy'>".$baidangban["tensach"]."</p>
 							<p>Tác giả: ".$baidangban["tacgia"]."</p>
 							<p>Thể loại: ".$baidangban["tentheloai"]."</p>
 							<p class='price-buy'>Giá: ".$baidangban["gia"]."</p>
 							<p>Số lượng: ".$baidangban["soluong"]." </p>
-							
 							<p class='info-buy tx'>Mô tả: ".$baidangban["mota"]."</p>
-					
 						</div>
 					</div>
 				</div>
@@ -48,10 +45,16 @@ class ChiTietBaiDangBanCtrl
 							<button class='button contactbtn'>Liên hệ ngay</button>
 							<a href='?to=thongtincanhan&id=".$baidangban["idtaikhoan"]."' ><img class='img-buyer' src='".$baidangban["anhnguoidung"]."'></a>
 						<div>
-
 						</div>
 					</div>
 				</div>
+
+				<!--TODO-->
+				<form action='' method='get'>
+					<input type='hidden' name='to' value='thanhtoan'>
+					<input type='hidden' name='idbaidangban' value='".$baidangban["idbaidang"]."'>
+					<button type='submit'>Đặt hàng</button>
+				</form>
 			</div>";
 			
 		}
