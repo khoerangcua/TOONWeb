@@ -46,6 +46,9 @@ class SwichPageControler
 				case 'upload':
                     include_once("public/Views/upload.php");
                     break;
+                case 'thanhtoan':
+                    include_once("public/Views/thanhtoan.php");
+                    break;
             }
         } else {
 			echo("lỗi");
