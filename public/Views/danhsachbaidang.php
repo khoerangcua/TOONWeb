@@ -27,7 +27,7 @@
         <h3 class="title">Danh sách bài đăng</h3>
         <div class="searchbar2 mb-5">
                 <div class="d-flex justify-content-center">
-                    <div class="search2"> <input type="text" class="search2-input" placeholder="Bạn cần tìm gì?.." name=""> <a href="#" class="search2-icon"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <div class="search2"> <input type="text" class="search2-input" placeholder="Bạn cần tìm gì?.." name=""> <a href="#x" class="search2-icon"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                             </svg> </a> </div>
                 </div>
@@ -71,17 +71,7 @@
                 
             </div>
             <div class="col-12 col-md-9 col-lg-10 ">
-                <div class="filter-status d-flex mb-3">
-                    <a href="" class="status-menu col-2">
-                        <span href="">Đang bán</span>
-                    </a>
-                    <a href="" class="status-menu col-2 ms-1">
-                        <span href="">Đã bán</span>
-                    </a>
-                    <a href="" class="status-menu col-2 ms-1">
-                        <span href="">Đã hủy</span>
-                    </a>
-                </div>
+                
                 <?php 
 					require_once("private/Controllers/TrangkiemduyetController.php");
 					$trangkiemduyetCtrl = new TrangKiemDuyetCtrl();

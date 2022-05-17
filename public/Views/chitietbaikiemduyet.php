@@ -39,9 +39,12 @@
         <div class="row contact">
             <div class="col-12 col-md-8 col-lg-8"></div>
             <div>
-                <button class="button btn-allow">Phê duyệt ✓</button>
-                <button class="button btn-reject">Từ chối ✕</button>
 				
+			 <?php 
+				
+				$chiTietTinKiemDuyetCtrl = new ChiTietTinKiemDuyetCtrl();
+				$chiTietTinKiemDuyetCtrl->LoadCNKiemDuyet();
+			?>	
             </div>
         </div>
     </div>

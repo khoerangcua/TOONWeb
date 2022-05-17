@@ -69,7 +69,7 @@ class TinCanMuaModel {
     $tincanmua = array();
     $link = "";
     taoKetNoi( $link );
-    $result = chayTruyVanTraVeDL( $link, "SELECT * FROM tbl_tincanmua WHERE tbl_tincanmua.trangthai = 0 AND tbl_tincanmua.idtincanmua = $idtincanmua" );
+    $result = chayTruyVanTraVeDL( $link, "SELECT * FROM(SELECT tbl_tincanmua.*, tbl_theloai.tentheloai FROM tbl_tincanmua INNER JOIN tbl_theloai ON tbl_tincanmua.idtheloai = tbl_theloai.idtheloai) AS bang WHERE bang.trangthai = 0 AND bang.idtincanmua =  $idtincanmua" );
     while ( $rows = mysqli_fetch_assoc( $result ) ) {
       array_push( $tincanmua, $rows );
       break;
@@ -204,5 +204,25 @@ class TinCanMuaModel {
       return $mangrong;
     }
   }
+	public function DangBaiMua($idtaikhoan,$tensach, $tacgia, $gia, $theloai, $chatluong, $soluong, $mota, $file)
+    {
+		$link = null;
+        taoKetNoi($link);
+		
+		$ngay = date("Y-m-d H:i:s",mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y")));
+		$tensachConv = mysqli_real_escape_string($link, $tensach);
+		$tacgiaConv = mysqli_real_escape_string($link, $tacgia);
+		$motaConv = mysqli_real_escape_string($link, $mota);
+		$giamin = $gia * 70/100 ;
+		$chatluongmin = $chatluong * 70/100;
+        
+
+        chayTruyVanKhongTraVeDL($link, "INSERT INTO `tbl_tincanmua` VALUES (NULL, '$idtaikhoan', '$tensachConv',
+                                                                    '$theloai', '$tacgiaConv', '', '$motaConv', '$file', '0','$ngay', 
+                                                                     '$soluong', '$gia','$giamin', '$chatluong', '$chatluongmin')"
+                                                                    );
+        	
+        
+    }
 }
 ?>

@@ -30,7 +30,7 @@ class ChiTietTinKiemDuyetCtrl
 		else{
 			$baidangbanModel = new BaiDangBanModel();
 			$baidangban = $baidangbanModel->LoadChiTietBDBan($id_BDBan);
-			if($baidangban["trangthai"]){
+			
 				echo'
 					<div class="row info-item-buy">
             			<div class="col-md-4 col-lg-3 col-xl-3 col-12 text-center">
@@ -40,7 +40,7 @@ class ChiTietTinKiemDuyetCtrl
 
                 			<div class="desc">
                     			<p class="name-buy">'.$baidangban["tensach"].'</p>
-                    			<p>Thể loại: '.$baidangban["theloai"].'</p>
+                    			<p>Thể loại: '.$baidangban["tentheloai"].'</p>
                     			<p>Tác giả: '.$baidangban["tacgia"].'</p>
 								<p class="price-buy">'.$baidangban["gia"].'đ</p>
                     			<p>Số lượng: '.$baidangban["soluong"].'</p>
@@ -51,7 +51,7 @@ class ChiTietTinKiemDuyetCtrl
             			</div>
 					</div>
 				';
-				}
+				
 			}
 	}
 	public function LoadChiTietKiemDuyetTinMua()
@@ -64,7 +64,7 @@ class ChiTietTinKiemDuyetCtrl
 		else{
 			$tincanmuaModel = new TinCanMuaModel();
 			$tincanmua = $tincanmuaModel->LoadChiTietTinCanMua($id_TCMua);
-			if($tincanmua["trangthai"]){
+			
 				echo'
 					<div class="row info-item-buy">
             			<div class="col-md-4 col-lg-3 col-xl-3 col-12 text-center">
@@ -74,7 +74,7 @@ class ChiTietTinKiemDuyetCtrl
 
                 			<div class="desc">
                     			<p class="name-buy">'.$tincanmua["tensach"].'</p>
-                    			<p>Thể loại: '.$tincanmua["theloai"].'</p>
+                    			<p>Thể loại: '.$tincanmua["tentheloai"].'</p>
                     			<p>Tác giả: '.$tincanmua["tacgia"].'</p>
 								<p class="price-buy">Giá MAX: '.$tincanmua["giamax"].'đ</p>
 								<p class="price-buy">Giá MIN: '.$tincanmua["giamin"].'đ</p>
@@ -88,8 +88,49 @@ class ChiTietTinKiemDuyetCtrl
             			</div>
 					</div>
 				';
-				}
+				
 		}
+	}
+	public function LoadCNKiemDuyet(){
+		
+		if(isset($_GET["kduyet"])){
+			$this->PheDuyetTinBan();
+			echo"Kiem Duyet";
+		}
+		else{
+			echo '
+				<form method="get">
+					<input type="hidden" name="to" value="chitietkiemduyet">
+					<input type="hidden" name="xem" value="'.$_GET["xem"].'">
+					<input type="hidden" name="id" value="'.$_GET["id"].'">
+                	<button type="" name="kduyet" value="pduyet" class="button btn-allow">Phê duyệt ✓</button>
+                	<button type="submit" name="kduyet" value="huy" class="button btn-reject">Từ chối ✕</button>
+				</form>
+			';
+		}
+	}
+	public function PheDuyetTinBan(){
+		$id_BDBan = isset($_GET["id"]) ? $_GET["id"] : -1;
+		if ($id_BDBan == -1 ){
+			 echo '<script>alert("Không tìm thấy bài đăng!")</script>';
+		}
+		else{
+			switch($_GET["kduyet"])
+			{
+				case "pduyet":
+					$baidangbanModel = new BaiDangBanModel();
+					$baidangbanModel->PheDuyet($id_BDBan);
+					header("Location: ./?to=kiemduyet&xem=ban&duyet=da");
+					break;
+				case "huy":
+					$baidangbanModel = new BaiDangBanModel();
+					$baidangbanModel->TuChoi($id_BDBan);
+					header("Location: ./?to=kiemduyet&xem=ban&duyet=da");
+					break;
+			}	
+			
+		}
+		
 	}
 }
 ?>

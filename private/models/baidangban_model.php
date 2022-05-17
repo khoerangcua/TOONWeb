@@ -69,7 +69,7 @@ class BaiDangBanModel {
     $baidangban = array();
     $link = "";
     taoKetNoi( $link );
-    $result = chayTruyVanTraVeDL( $link, "SELECT * FROM tbl_baidangban AS bdban WHERE bdban.trangthai = 0 AND bdban.idbaidang = $idbaidangban" );
+    $result = chayTruyVanTraVeDL( $link, "SELECT * FROM(SELECT tbl_baidangban.*, tbl_theloai.tentheloai FROM tbl_baidangban INNER JOIN tbl_theloai ON tbl_baidangban.idtheloai = tbl_theloai.idtheloai) AS bang WHERE bang.trangthai = 0 AND bang.idbaidang = $idbaidangban" );
     while ( $rows = mysqli_fetch_assoc( $result ) ) {
       array_push( $baidangban, $rows );
       break;
@@ -206,17 +206,32 @@ public function LoadBaiDangBanMoi() {
   }
 	public function DangBaiBan($idtaikhoan,$tensach, $tacgia, $gia, $theloai, $chatluong, $soluong, $mota, $file)
     {
-
-		$ngay = date("Y-m-d H:i:s",mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y")));
-        $link = null;
+		$link = null;
         taoKetNoi($link);
+		
+		$ngay = date("Y-m-d H:i:s",mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y")));
+		$tensachConv = mysqli_real_escape_string($link, $tensach);
+		
+		$tacgiaConv = mysqli_real_escape_string($link, $tacgia);
+		$motaConv = mysqli_real_escape_string($link, $mota);
+        
 
         chayTruyVanKhongTraVeDL($link, "INSERT INTO `tbl_baidangban` VALUES (NULL, '$idtaikhoan',
-                                                                    '$theloai', '$tensach', '$tacgia', '', '$mota',
+                                                                    '$theloai', '$tensachConv', '$tacgiaConv', '', '$motaConv',
                                                                     '$gia', '$soluong', '$file', '$ngay', '0', '$chatluong')"
                                                                     );
-        echo("Đăng bài thành công!");
+        	
         
     }
+	public function PheDuyet($idbaidang){
+		$link = null;
+        taoKetNoi($link);
+		chayTruyVanKhongTraVeDL($link, "UPDATE tbl_baidangban SET trangthai = '1' WHERE idbaidang = $idbaidang");
+	}
+	public function TuChoi($idbaidang){
+		$link = null;
+        taoKetNoi($link);
+		chayTruyVanKhongTraVeDL($link, "UPDATE tbl_baidangban SET trangthai = '-1' WHERE idbaidang = $idbaidang");
+	}
 }
 ?>
