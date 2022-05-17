@@ -38,23 +38,25 @@ class ChiTietBaiDangBanCtrl
 						</div>
 					</div>
 				</div>
-        			<p style='float:right; margin:20px 0 0 0;''>Bạn muốn sở hữu cuốn sách này?  </p>
+        			<p style='float:left; margin:20px 0 0 0;''>Bạn muốn sở hữu cuốn sách này?  </p>
         				<br style='clear:both'>
 					<div class='row contact'>
 						<div class='info-buyer'>
 							<button class='button contactbtn'>Liên hệ ngay</button>
 							<a href='?to=thongtincanhan&id=".$baidangban["idtaikhoan"]."' ><img class='img-buyer' src='".$baidangban["anhnguoidung"]."'></a>
 						<div>
+						<form action='' method='get'>
+							<input type='hidden' name='to' value='thanhtoan'>
+							<input type='hidden' name='idbaidangban' value='".$baidangban["idbaidang"]."'>
+							<button class='button orderbtn' type='submit'>Đặt hàng</button>
+						</form>
 						</div>
 					</div>
+					<!--TODO-->
+					
 				</div>
 
-				<!--TODO-->
-				<form action='' method='get'>
-					<input type='hidden' name='to' value='thanhtoan'>
-					<input type='hidden' name='idbaidangban' value='".$baidangban["idbaidang"]."'>
-					<button type='submit'>Đặt hàng</button>
-				</form>
+				
 			</div>";
 			
 		}
