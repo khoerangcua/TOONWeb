@@ -66,7 +66,7 @@ class DangBaiCtrl{
 								{
 									case "ban":{
 										
-										$baidganbanModel = new BaiDangBanModel();
+										$baidangbanModel = new BaiDangBanModel();
 										$baidangbanModel->DangBaiBan($idtaikhoan, $tensach, $tacgia, $gia, $theloai, $chatluong, $soluong, $mota, $duongdananh);
 										header("Location: ./?to=quanlycanhan&xem=tinban&id=$idtaikhoan");
 										break;

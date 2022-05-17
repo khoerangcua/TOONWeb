@@ -24,10 +24,10 @@ class TrangChuCtrl{
 	}
 	public function LoadTaiKhoanHeader()
 	{
-		$idtaikhoan = $_SESSION["idtaikhoan"];
 		
-		if(isset($idtaikhoan)){
-			
+
+		if(isset($_SESSION["idtaikhoan"])){
+			$idtaikhoan = $_SESSION["idtaikhoan"];
 			
 			$taikhoanModel = new TaiKhoanModel();
 			$taikhoan = $taikhoanModel->LoadThongTinTaiKhoan($idtaikhoan);
