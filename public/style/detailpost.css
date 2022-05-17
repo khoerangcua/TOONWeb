@@ -113,3 +113,12 @@ body {
     background-color: #fff;
     color: #002795;
 }
+.confirm {
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    margin-top: 25px;
+}
+.confirm P{
+    margin-top: 12px;
+}

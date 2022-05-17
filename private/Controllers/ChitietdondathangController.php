@@ -34,13 +34,10 @@ class ChiTietDonDatHangCtrl
 						</div>
 					</div>
 				</div>
-        		<br style="clear:both">
-				<div class="row contact">
-					<div class="info-buyer">
-						<button class="button contactbtn" style="padding: 10px 20px;">Đặt lại</button>
+				<div class="row confirm justify-content-end">
+						<p class="col-3">Đơn hàng này đã được giao tới bạn?</p>
+						<button class="button btn-allow col-2" style="width: 300px;padding: 5px 20px; font-size:14px">Xác nhận đã nhận hàng</button>
 						<div>
-
-						</div>
 					</div>
 				</div>
 			</div>
