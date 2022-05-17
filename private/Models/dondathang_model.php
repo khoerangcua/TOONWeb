@@ -70,5 +70,12 @@ class DonDatHangModel {
       return ( 0 );
     }
   }
+
+  public function AddDonDatHang($idbaiban, $idnguoiban, $idnguoimua, $soluong, $tinhtrang, $thanhtoan, $dongia, $thoigian, $hinhthucvanchuyen, $hinhthucthanhtoan){
+    
+    $link = "";
+    taoKetNoi( $link );
+    chayTruyVanKhongTraVeDL($link, "INSERT INTO `tbl_dondathang` VALUES (NULL, '".$idbaiban."', '".$idnguoiban."', '".$idnguoimua."', '".$soluong."', '".$tinhtrang."', '".$thanhtoan."', '".$dongia."', '".$thoigian."', '".$hinhthucvanchuyen."', '".$hinhthucthanhtoan."')");
+  }
 }
 ?>
