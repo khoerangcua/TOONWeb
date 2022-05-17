@@ -25,14 +25,7 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-6 ad-text">
-                <p>Đăng kí gói</p>
-                <p>Premium</p>
-                <p>ngay bây giờ!!</p>
-            </div>
-            <div class="col-6"></div>
-        </div>
+        
     </div>
 
 </body>

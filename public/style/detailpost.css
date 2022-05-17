@@ -43,21 +43,20 @@ body {
 }
 .contact{
     margin-top: 10px;
-    float: right;
 }
 .contactbtn:hover{
-    color: #002795;
+    color: #000;
     background-color: #fff;
-    border-color: 0.2px solid #002795;
+    border-color: 0.2px solid #000;
 }
 .contactbtn{
     padding-left: 30px;
     margin-left: 1.25rem;
-    border: #002795 solid 1px;
+    border: #000 solid 1px;
     font-size: 14px;
     font-weight: 600;
     color: #fff;
-    background-color: #002795;
+    background-color: #000;
 }
 .img-buyer{
 	position: absolute;
@@ -102,4 +101,24 @@ body {
     color: #c42020;
     background-color: #fff;
     border-color: 0.2px solid #c42020;
+}
+.orderbtn{
+    float: right;
+    padding: 10px 50px;
+    font-weight: 600;
+    border: #002795 1px solid;
+    background-color: #002795;
+}
+.orderbtn:hover{
+    background-color: #fff;
+    color: #002795;
+}
+.confirm {
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    margin-top: 25px;
+}
+.confirm P{
+    margin-top: 12px;
 }
