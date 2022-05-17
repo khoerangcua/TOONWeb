@@ -29,11 +29,13 @@
         <div class="navbar container">
             <div class="page-icon">
                 <a href="">
-                    <img class="page-logo" src="../resource/275415790_351273863444344_4713147307608182994_n.jpg">
+                    <img class="page-logo2" src="../resource/Logo/logo.png">
                 </a>
             
             </div>
-            <div class="searchbar">
+            <div class="searchbar text-center">
+                
+            <img class="logo-txt1" src="../resource/Logo/logotxt.png" >
                 <div class="d-flex justify-content-center ">
                     <div class="search"> <input type="text" class="search-input" placeholder="Bạn cần tìm gì?.." name=""> <a href="#" class="search-icon"> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
@@ -54,8 +56,7 @@
                     </svg>
                     <p class="d-none d-md-block d-lg-block">Quản lí tin</p>
                 </a>
-            </div>
-            <div class="uploadbtn button">
+                <div class="uploadbtn button">
                 <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
                         <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z" />
                         <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
@@ -63,6 +64,10 @@
                     <p class="uploadtxt">Đăng bài</p>
                 </a>
             </div>
+            </div>
+            
+
+
         </div>
     </header>
 
