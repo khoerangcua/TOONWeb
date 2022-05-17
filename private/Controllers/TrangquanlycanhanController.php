@@ -107,7 +107,7 @@ class TrangQuanLyCaNhanCtrl {
                         <div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <a href="index.php?to=chitietdondathang&id=' . $dondathang[ $i ][ "iddondathang" ] . '">' . $dondathang[ $i ][ "tensach" ] . '</a>
+                                    <a href="index.php?to=chitietdondathang&loai=donbanhang&id=' . $dondathang[ $i ][ "iddondathang" ] . '">' . $dondathang[ $i ][ "tensach" ] . '</a>
                                     <p class="mb-5 pro-price">' . $dondathang[ $i ][ "dongia" ] . 'd</p>
                                     <p class="buying">' . $this->LoadTrangThaiDonHang( $dondathang[ $i ][ "tinhtrang" ] ) . '</p>
                                 </div>
@@ -138,7 +138,7 @@ class TrangQuanLyCaNhanCtrl {
                         <div>
                             <div class="d-flex justify-content-between">
                                 <div>
-                                    <a href="index.php?to=chitietdondathang&id=' . $dondathang[ $i ][ "iddondathang" ] . '">' . $dondathang[ $i ][ "tensach" ] . '</a>
+                                    <a href="index.php?to=chitietdondathang&loai=dondatmua&id=' . $dondathang[ $i ][ "iddondathang" ] . '">' . $dondathang[ $i ][ "tensach" ] . '</a>
                                     <p class="mb-5 pro-price">' . $dondathang[ $i ][ "dongia" ] . 'd</p>
                                     <p class="buying">' . $this->LoadTrangThaiDonHang( $dondathang[ $i ][ "tinhtrang" ] ) . '</p>
                                 </div>
@@ -151,25 +151,38 @@ class TrangQuanLyCaNhanCtrl {
     }
   }
   public function LoadTrangThaiBaiDang( $trangthai ) {
-    if ( $trangthai == 1 ) {
-      return "Đã duyệt";
-    } else {
-      if ( $trangthai == 0 ) {
-       return "Đang chờ duyệt";
-      } else {
-        return "Đã bị hủy";
-      }
+    if ($trangthai == -1) {
+      return "Đã hủy";
     }
+
+    if ($trangthai == 0) {
+      return "Đang chờ phê duyệt";
+    }
+
+    if ($trangthai == 1) {
+      return "Đã được phê duyệt";
+    }
+
   }
   public function LoadTrangThaiDonHang( $trangthai ) {
-    if ( $trangthai == 1 ) {
-      return "Đã thanh toán";
-    } elseif ( $trangthai == 0 ) {
-      return "Chưa thanh toán";
-    }
-    else {
+
+    if ($trangthai == -1) {
       return "Đã bị hủy";
     }
+
+    if ($trangthai == 0) {
+      return "Đang chờ người bán chấp nhận";
+    }
+
+    if ($trangthai == 1) {
+      return "Người bán đã chấp nhận";
+    }
+
+    if ($trangthai == 2) {
+      return "Người mua đã nhận hàng";
+    }
+
+
   }
   public function LoadDropDown() {
     $id = $_GET[ "id" ];
