@@ -28,30 +28,35 @@ class ChiTietBaiDangBanCtrl
 						<img class='imgchitietMNCDT' src='".$baidangban["diachianh"]."' alt='Hình ảnh sách cần mua'>
 					</div>
 					<div class='col-md-8 col-lg-9 col-xl-9 col-12'>
-				
 						<div class='desc'>
 							<p class='name-buy'>".$baidangban["tensach"]."</p>
 							<p>Tác giả: ".$baidangban["tacgia"]."</p>
 							<p>Thể loại: ".$baidangban["tentheloai"]."</p>
 							<p class='price-buy'>Giá: ".$baidangban["gia"]."</p>
 							<p>Số lượng: ".$baidangban["soluong"]." </p>
-							
 							<p class='info-buy tx'>Mô tả: ".$baidangban["mota"]."</p>
-					
 						</div>
 					</div>
 				</div>
-        			<p style='float:right; margin:20px 0 0 0;''>Bạn muốn sở hữu cuốn sách này?  </p>
+        			<p style='float:left; margin:20px 0 0 0;''>Bạn muốn sở hữu cuốn sách này?  </p>
         				<br style='clear:both'>
 					<div class='row contact'>
 						<div class='info-buyer'>
 							<button class='button contactbtn'>Liên hệ ngay</button>
 							<a href='?to=thongtincanhan&id=".$baidangban["idtaikhoan"]."' ><img class='img-buyer' src='".$baidangban["anhnguoidung"]."'></a>
 						<div>
-
+						<form action='' method='get'>
+							<input type='hidden' name='to' value='thanhtoan'>
+							<input type='hidden' name='idbaidangban' value='".$baidangban["idbaidang"]."'>
+							<button class='button orderbtn' type='submit'>Đặt hàng</button>
+						</form>
 						</div>
 					</div>
+					<!--TODO-->
+					
 				</div>
+
+				
 			</div>";
 			
 		}

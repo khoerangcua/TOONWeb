@@ -3,7 +3,6 @@ include_once("private/Models/taikhoan_model.php");
 class DangNhapController{
 
     public function HienThiTrangDangNhap(){
-
       if (isset($_GET["kiemtradangnhap"])) {
           $this->KiemTraDangNhap();
       }
@@ -77,4 +76,3 @@ class DangNhapController{
         echo"Dang nhap that bai";
     }
 }
-?>

@@ -30,15 +30,9 @@
 <body>
 	<?php
 	require_once("private/Controllers/ChitiettincanbanController.php");
-	
 	$chiTietBaiDangBanCtrl = new ChiTietBaiDangBanCtrl();
 	$chiTietBaiDangBanCtrl->LoadChiTietBaiDangBan();
-	
-	
 	?>
-	
-	
-	
 </body>
 
 </html>

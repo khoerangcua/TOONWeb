@@ -178,3 +178,148 @@ border: none;
     color: #000000;
     font-size: 13px;
 }
+.uploadbtn{
+    background-color: #002795;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    border: none;
+    padding: 15px 12px ;
+}
+.uploadbtn:hover{
+    
+    background-color: #ffd154;
+    border-radius: 10px;
+    border: none;
+}
+.uploadbtn:hover:after {
+    
+    background-color: #ffd154;
+    border-radius: 10px;
+    
+}
+.uploadbtn::after{
+    
+    border-radius: 10px;
+    
+}
+.uploadbtn a{
+    text-decoration: none;
+    color: #ffd154;
+
+}
+.uploadbtn a:hover{
+    color: #002795;
+}
+.uploadtxt{
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.logo-txt{
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+}
+.logo-txt1{
+    height: 100px;
+    width: 200px;
+    object-fit: contain;
+}
+.page-logo2{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.ftr-background {
+    color: #002795;
+    background-color: #ffd154;
+}
+
+.ftr-whitespace {
+    height: 60px;
+    z-index: 5;
+}
+
+.ftr-image {
+    padding-top: 10px;
+    width: 300px;
+    height: 300px;
+}
+#ftr-image{
+    z-index: 11;
+}
+
+.ftr-shopname {
+    text-align: center;
+    margin: 30px;
+}
+
+.ftr-title {
+    text-align: center;
+    margin: 40px;
+    font-weight: 600;
+}
+
+.ftr-li {
+    margin: 10px;
+}
+.ftr-li a{
+    text-decoration: none;
+    color: #002795;
+
+}
+.ftr-li a:hover{
+    color: #517bef;
+}
+.ftr-copyright {
+    margin: 0px 0px 0px 40px;
+}
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
+}
+
+footer p {
+    margin: 0px;
+}
+
+.icon {
+    height: 16px;
+    width: 16px;
+}
+.ftr-logo{
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+}
+.up-icon {
+    height: 32px;
+    width: 32px;
+    fill: grey;
+}
+.up-icon:hover
+{
+    fill: #00CED1;
+}
+
+#ct-if {
+    list-style-type: none;
+}
+
+.uploadbtn{
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 80px;
+    /* Place the button at the bottom of the page */
+    right: 10px;
+    /* Place the button 30px from the right */
+    z-index: 5;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+
+    cursor: pointer;
+}
+
+footer {margin-top: 80px;}
