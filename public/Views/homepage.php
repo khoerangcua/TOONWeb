@@ -26,47 +26,9 @@
 </head>
 
 <body>
-    <header class="container-fluid">
-        <div class="navbar">
-            <div class="page-icon">
-                <a href="">
-                    <img class="page-logo" src="public/resource/275415790_351273863444344_4713147307608182994_n.jpg">
-                </a>
-                <a class="page-name d-none d-md-inline-block d-lg-inline-block" href="">TOON</a>
-            </div>
-            <div class="searchbar">
-                <form class="d-flex justify-content-center px-5" >
-                    <div class="search"> 
-						<input type="hidden" name="to" value="timkiem">
-						<?php
-		  					if($_GET["xem"] == "ban"){
-								echo"<input type='hidden' name='xem' value='ban'>";
-	
-							}
-							else{
-								echo"<input type='hidden' name='xem' value='mua'>";
-							}
-		  				?>
-                		<input type="hidden" name="from" value="searchbar">
-						<input type="text" class="search-input" placeholder="Bạn cần tìm gì?.." name="key"> 
-						<button type="submit" class="search-icon">	
-							<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                            </svg> 
-						</button> 
-					</div>
-                </form>
-            </div>
-            <div class="action-bar">
-                <?php 
-					
-					$trangchuCtrl = new TrangChuCtrl();
-					$trangchuCtrl->LoadTaiKhoanHeader();
-				?>
-                
-            </div>
-        </div>
-    </header>
+    <?php
+    include_once("public/Views/header.php");
+    ?>
     <!--body-->
     <div class="container">
         <div class="catogery">
@@ -80,7 +42,7 @@
             </div>
         </div>
         <div class="view-list">
-            <div class="heading row" align="center">
+            <div class="heading row" alignment="center">
 				<div class="col-md-6">
 					
 					<a href="?to=trangchu&xem=mua">
@@ -109,7 +71,9 @@
             </div>
         </div>
     </div>
-    </div>
+    <?php
+        include_once("public/views/footer.php");
+    ?>
 </body>
 
 </html>

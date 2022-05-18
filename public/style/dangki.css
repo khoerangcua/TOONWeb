@@ -9,13 +9,11 @@ html, body{
 	background-color: #FFFFFF;
 	align-content: center;
 	justify-content: center;
-	padding-top: 30px;
 	padding-bottom: 10px;
 }
 .icon{
-	width: 15%;
-	height: 15%;
-	margin-bottom: 20px;
+	width: 25%;
+	height: 25%;
 	
 }
 .dky-form{
