@@ -57,7 +57,7 @@ class TaiKhoanModel
 
         chayTruyVanKhongTraVeDL($link, "INSERT INTO `tbl_taikhoan` VALUES (NULL, 
                                                                     '$hoten', '$sodienthoai', '', 1,
-                                                                    '$username', '$password', '$email', '', 'fre')"
+                                                                    '$username', '$password', '$email', 'https://lh3.googleusercontent.com/2RKyd1W-d1ZV6aEPri7I6bd4Ss-0QcgYb9NgaJDDUeJM3BX9g_wHRiFyiPl2EvJvVh-KrA', 'fre')"
                                                                     );
         echo("dang ky thanh cong");
         
