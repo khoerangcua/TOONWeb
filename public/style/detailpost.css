@@ -65,6 +65,7 @@ body {
     border-radius: 100%;
     width: 45px;
     height: 45px;
+    object-fit: cover;
 }
 .info-buyer{
     position: relative;

@@ -24,8 +24,8 @@
 </head>
 
 <body>
-    <div class="container">
-        
+    <div class="container text-center">
+        <img src="../resource/ad.png">
     </div>
 
 </body>
