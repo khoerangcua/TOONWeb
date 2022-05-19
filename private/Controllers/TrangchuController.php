@@ -75,7 +75,7 @@ class TrangChuCtrl{
 			echo '
 				<a class="col-4 col-md-3 col-lg-2 catogery-item"  href="index.php?to=timkiem&xem='.$xem.'&from=kind&idloai='.$danhmuc[$i]["idtheloai"].'">
                     <div class="card-inner align-items-center">
-                        
+						<img class="catogery-img" src='.$danhmuc[$i]["anhloai"].'>
                         <p>'.$danhmuc[$i]["tentheloai"].'</p>
                     </div>
                 </a>
