@@ -2,6 +2,8 @@
 <html lang="en">
 <?php 
 	require_once("private/Controllers/TrangchuController.php");
+	require_once( "private/Controllers/HeaderController.php" );
+	
 ?>
 <head>
     <meta charset="UTF-8">

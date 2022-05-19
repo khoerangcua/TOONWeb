@@ -4,30 +4,7 @@ require_once("private/models/tincanmua_model.php");
 require_once("private/models/taikhoan_model.php");
 class TrangTimKiemCtrl
 {
-	public function LoadTaiKhoanHeader(){
-		$idtaikhoan = $_SESSION["idtaikhoan"];
-		$taikhoanModel = new TaiKhoanModel();
-		$taikhoan = $taikhoanModel->LoadThongTinTaiKhoan($idtaikhoan);
-		if($taikhoan){
-			echo '
-			<div> <a href="?to=timkiem&xem=ban" title="Tài khoản">
-          		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-            		<path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-          		</svg> '.$taikhoan["tentaikhoan"].' </a> 
-			</div>
-			';
 	
-		}
-		else{
-			echo '
-			<div> <a href="../page/?to=login" title="Tài khoản">
-          		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-            		<path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-          		</svg> Đăng nhập </a> 
-			</div>
-			';
-		}
-	}
 	
 	public function LoadTrangTimKiem()
 	{
@@ -149,7 +126,7 @@ class TrangTimKiemCtrl
                         <div class="pro-detail">
                             <h6 class="pro-name"><a href="index.php?to=chitiettincanban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a></h6>
                             <div class="pro-price">
-                                <p class="pro-price sale">'.$baidangban[$i]["gia"].'₫</p>
+                                <p class="pro-price sale">'.number_format($baidangban[$i]["gia"], 0, ',', '.').'₫</p>
                             </div>
                         </div>
 
@@ -223,7 +200,7 @@ class TrangTimKiemCtrl
                         <div class="pro-detail">
                             <h6 class="pro-name"><a href="index.php?to=chitiettincanmua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a></h6>
                             <div class="pro-price">
-                                <p class="pro-price sale">'.$tincanmua[$i]["giamax"].'₫</p>
+                                <p class="pro-price sale">'.number_format($tincanmua[$i]["giamax"], 0, ',', '.').'₫</p>
                             </div>
                         </div>
 
