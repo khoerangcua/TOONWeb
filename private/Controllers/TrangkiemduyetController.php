@@ -66,7 +66,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'₫</p>
+                                    <p class="mb-5 pro-price">'.number_format($baidangban[$i]["gia"], 0, ',', '.').'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($baidangban[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'₫</p>
+                                    <p class="mb-5 pro-price">'.number_format($baidangban[$i]["gia"], 0, ',', '.').'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($baidangban[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=ban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$baidangban[$i]["gia"].'₫</p>
+                                    <p class="mb-5 pro-price">'.number_format($baidangban[$i]["gia"], 0, ',', '.').'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($baidangban[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -150,7 +150,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'₫</p>
+                                    <p class="mb-5 pro-price">'.number_format($tincanmua[$i]["giamax"], 0, ',', '.').'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($tincanmua[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -177,7 +177,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'₫</p>
+                                    <p class="mb-5 pro-price">'.number_format($tincanmua[$i]["giamax"], 0, ',', '.').'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($tincanmua[$i]["trangthai"]).'</p>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@ class TrangKiemDuyetCtrl
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietkiemduyet&xem=mua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a>
-                                    <p class="mb-5 pro-price">'.$tincanmua[$i]["giamax"].'₫</p>
+                                    <p class="mb-5 pro-price">'.number_format($tincanmua[$i]["giamax"], 0, ',', '.').'₫</p>
                                     <p class="buying">'.$this->Loadtrangthai($tincanmua[$i]["trangthai"]).'</p>
                                 </div>
                             </div>

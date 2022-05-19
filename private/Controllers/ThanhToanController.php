@@ -135,7 +135,7 @@ class ThanhToanController{
                                         <span class='product-name'>".$thongTinBaiDangBan["tensach"]."</span>
                                     </th>
                                     <td class='product-price'>
-                                        <span>".number_format("".$thongTinBaiDangBan["gia"]."",0,",",",")." </span>
+                                        <span>".number_format($thongTinBaiDangBan["gia"], 0, ',', '.')." </span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -148,7 +148,7 @@ class ThanhToanController{
                         <input type='hidden' name='soluong' value='1'></input>
                         <input type='hidden' name='tinhtrang' value='0'></input>
                         <input type='hidden' name='thanhtoan' value='0'></input>
-                        <input type='hidden' name='dongia' value='".$thongTinBaiDangBan["gia"]."'></input>
+                        <input type='hidden' name='dongia' value='".number_format($thongTinBaiDangBan["gia"], 0, ',', '.')."'></input>
                         
 
                         <div class='col-6' style='float: right;'>

@@ -88,6 +88,11 @@ class DangNhapController{
             header('Location: ./?to=kiemduyet&xem=ban');
             return;
         }
+
+        if ($taikhoan["quyen"] == "pre") {
+            header('Location: ./?to=trangchu&xem=ban');
+            return;
+        }
         
          
     }

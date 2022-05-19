@@ -45,7 +45,7 @@ class TrangQuanLyCaNhanCtrl {
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitiettincanban&id=' . $baidangban[ $i ][ "idbaidang" ] . '">' . $baidangban[ $i ][ "tensach" ] . '</a>
-                                    <p class="mb-5 pro-price">' . $baidangban[ $i ][ "gia" ] . 'd</p>
+                                    <p class="mb-5 pro-price">' . number_format($baidangban[ $i ][ "gia" ] , 0, ',', '.'). 'd</p>
                                     <p class="buying">' . $this->LoadTrangThaiBaiDang( $baidangban[ $i ][ "trangthai" ] ) . '</p>
 									
                                 </div>
@@ -77,7 +77,7 @@ class TrangQuanLyCaNhanCtrl {
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitiettincanmua&id=' . $tincanmua[ $i ][ "idtincanmua" ] . '">' . $tincanmua[ $i ][ "tensach" ] . '</a>
-                                    <p class="mb-5 pro-price">' . $tincanmua[ $i ][ "giamax" ] . 'd</p>
+                                    <p class="mb-5 pro-price">' . number_format($tincanmua[ $i ][ "giamax" ], 0, ',', '.') . 'd</p>
                                     <p class="buying">' . $this->LoadTrangThaiBaiDang( $tincanmua[ $i ][ "trangthai" ] ) . '</p>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@ class TrangQuanLyCaNhanCtrl {
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietdondathang&loai=donbanhang&id=' . $dondathang[ $i ][ "iddondathang" ] . '">' . $dondathang[ $i ][ "tensach" ] . '</a>
-                                    <p class="mb-5 pro-price">' . $dondathang[ $i ][ "dongia" ] . 'd</p>
+                                    <p class="mb-5 pro-price">' . number_format($dondathang[ $i ][ "dongia" ], 0, ',', '.') . 'd</p>
                                     <p class="buying">' . $this->LoadTrangThaiDonHang( $dondathang[ $i ][ "tinhtrang" ] ) . '</p>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@ class TrangQuanLyCaNhanCtrl {
                             <div class="d-flex justify-content-between">
                                 <div>
                                     <a href="index.php?to=chitietdondathang&loai=dondatmua&id=' . $dondathang[ $i ][ "iddondathang" ] . '">' . $dondathang[ $i ][ "tensach" ] . '</a>
-                                    <p class="mb-5 pro-price">' . $dondathang[ $i ][ "dongia" ] . 'd</p>
+                                    <p class="mb-5 pro-price">' . number_format($dondathang[ $i ][ "dongia" ], 0, ',', '.') . 'd</p>
                                     <p class="buying">' . $this->LoadTrangThaiDonHang( $dondathang[ $i ][ "tinhtrang" ] ) . '</p>
                                 </div>
                             </div>

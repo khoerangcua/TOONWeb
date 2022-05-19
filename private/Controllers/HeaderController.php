@@ -153,7 +153,7 @@ class HeaderCtrl{
                         <div class="pro-detail">
                             <h6 class="pro-name"><a href="index.php?to=chitiettincanban&id='.$baidangban[$i]["idbaidang"].'">'.$baidangban[$i]["tensach"].'</a></h6>
                             <div class="pro-price">
-                                <p class="pro-price sale">'.$baidangban[$i]["gia"].'₫</p>
+                                <p class="pro-price sale">'.number_format($baidangban[$i]["gia"], 0, ',', '.').'₫</p>
                             </div>
                         </div>
 
@@ -176,7 +176,7 @@ class HeaderCtrl{
                         <div class="pro-detail">
                             <h6 class="pro-name"><a href="index.php?to=chitiettincanmua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a></h6>
                             <div class="pro-price">
-                                <p class="pro-price sale">'.$tincanmua[$i]["giamax"].'₫</p>
+                                <p class="pro-price sale">'.number_format($tincanmua[$i]["giamax"], 0, ',', '.').'₫</p>
                             </div>
                         </div>
 

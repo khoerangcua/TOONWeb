@@ -33,7 +33,7 @@ class ChiTietTinCanMuaCtrl
 							<p class="name-buy">'.$tincanmua["tensach"].'</p>
 							<p>Thể loại: '.$tincanmua["tentheloai"].'</p>
 							<p>Tác giả: '.$tincanmua["tacgia"].'</p>
-							<p class="price-buy">Giá tiền mong muốn: '.$tincanmua["giamin"].'đ - '.$tincanmua["giamax"].'đ</p>
+							<p class="price-buy">Giá tiền mong muốn: '.number_format($tincanmua["giamin"], 0, ',', '.').'đ - '.number_format($tincanmua["giamax"], 0, ',', '.').'đ</p>
 							<p>Chất lượng mong muốn: '.$tincanmua["chatluongmin"].'% - '.$tincanmua["chatluongmax"].'%</p>
 							<p>Số lượng: '.$tincanmua["soluong"].'</p>
 							<p class="info-buy tx">Mô tả: '.$tincanmua["mota"].'</p>

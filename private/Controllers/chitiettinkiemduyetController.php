@@ -42,7 +42,7 @@ class ChiTietTinKiemDuyetCtrl
                     			<p class="name-buy">'.$baidangban["tensach"].'</p>
                     			<p>Thể loại: '.$baidangban["tentheloai"].'</p>
                     			<p>Tác giả: '.$baidangban["tacgia"].'</p>
-								<p class="price-buy">'.$baidangban["gia"].'đ</p>
+								<p class="price-buy">'.number_format($baidangban["gia"], 0, ',', '.').'đ</p>
                     			<p>Số lượng: '.$baidangban["soluong"].'</p>
 								<p>Thời gian gửi: '.$baidangban["thoigian"].'</p>
                     			<p class="info-buy tx">Mô tả: '.$baidangban["mota"].'</p>
@@ -76,8 +76,8 @@ class ChiTietTinKiemDuyetCtrl
                     			<p class="name-buy">'.$tincanmua["tensach"].'</p>
                     			<p>Thể loại: '.$tincanmua["tentheloai"].'</p>
                     			<p>Tác giả: '.$tincanmua["tacgia"].'</p>
-								<p class="price-buy">Giá MAX: '.$tincanmua["giamax"].'đ</p>
-								<p class="price-buy">Giá MIN: '.$tincanmua["giamin"].'đ</p>
+								<p class="price-buy">Giá MAX: '.number_format($tincanmua["giamax"], 0, ',', '.').'đ</p>
+								<p class="price-buy">Giá MIN: '.number_format($tincanmua["giamin"], 0, ',', '.').'đ</p>
 								<p>Chất lượng mong muốn cao nhất: '.$tincanmua["chatluongmax"].'</p>
 								<p>Chất lượng mong muốn thấp nhất: '.$tincanmua["chatluongmin"].'</p>
                     			<p>Số lượng: '.$tincanmua["soluong"].'</p>

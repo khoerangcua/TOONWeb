@@ -32,7 +32,7 @@ class ChiTietBaiDangBanCtrl
 							<p class='name-buy'>".$baidangban["tensach"]."</p>
 							<p>Tác giả: ".$baidangban["tacgia"]."</p>
 							<p>Thể loại: ".$baidangban["tentheloai"]."</p>
-							<p class='price-buy'>Giá: ".$baidangban["gia"]."</p>
+							<p class='price-buy'>Giá: ".number_format($baidangban["gia"], 0, ',', '.')."</p>
 							<p>Số lượng: ".$baidangban["soluong"]." </p>
 							<p class='info-buy tx'>Mô tả: ".$baidangban["mota"]."</p>
 						</div>
