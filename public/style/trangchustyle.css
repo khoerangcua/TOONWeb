@@ -323,3 +323,29 @@ footer p {
 }
 
 footer {margin-top: 80px;}
+
+.mua-btn{
+    border: #002795 1px solid;
+    width: 100%;
+    background-color: #002795;
+    color: #fff; 
+    font-weight: 600;
+    font-size: 14px;
+}
+.mua-btn:hover{
+    color:#002795;
+    border: #002795 1px solid;
+}
+.ban-btn{
+    
+    border: #ffd154 1px solid;
+    width: 100%;
+    background-color: #ffd154;
+    color: #fff; 
+    font-weight: 600;
+    font-size: 14px; 
+}
+.ban-btn:hover{
+    color: #ffd154;
+    border: #ffd154 1px solid;
+}

@@ -45,16 +45,16 @@
         </div>
         <div class="view-list">
             <div class="heading row" alignment="center">
-				<div class="col-md-6">
+				<div class="col-6">
 					
 					<a href="?to=trangchu&xem=mua">
-						<button class="" type="button" style="align-content: center">Thuận Mua</button>
+						<button class="button mua-btn" type="button" style="align-content: center">Thuận Mua</button>
 					</a>
 				</div>
-				<div class="col-md-6">
+				<div class="col-6">
 					
 					<a href="?to=trangchu&xem=ban">
-						<button class="" type="button" style="align-content: center">Vừa Bán</button>	
+						<button class="button ban-btn" type="button" style="align-content: center">Vừa Bán</button>	
 					</a>
 				</div>
                 <!--<h3 class="text-uppercase">Hàng mới</h3>
