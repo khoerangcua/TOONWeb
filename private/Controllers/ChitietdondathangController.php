@@ -20,7 +20,7 @@ class ChiTietDonDatHangCtrl
 				
 				}
 			}
-			echo("oke");
+	
 
 			if ($_GET["loai"] == "dondatmua") {
 				$this->LoadChiTietDonDatMua($id_DDHang);

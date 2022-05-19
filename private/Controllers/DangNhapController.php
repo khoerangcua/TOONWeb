@@ -77,7 +77,6 @@ class DangNhapController{
         
         if ($taikhoan["quyen"] == "fre") {
             header('Location: ./?to=trangchu&xem=ban');
-            echo("da vo");
             return;
            
         }
@@ -86,7 +85,8 @@ class DangNhapController{
         }
 
         if ($taikhoan["quyen"] == "add") {
-           
+            header('Location: ./?to=kiemduyet&xem=ban');
+            return;
         }
         
          

@@ -53,12 +53,12 @@ class TrangChuCtrl{
 			echo '
 				<div class="col-lg-3 col-md-6 col-6 products">
                     <div class="pro-img">
-                        <a href="index.php?to=chitiettincanban&id='.$tincanmua[$i]["idtincanmua"].'">
+                        <a href="index.php?to=chitiettincanmua&id='.$tincanmua[$i]["idtincanmua"].'">
                             <img class="pro-img pro-img-1" src="'.$tincanmua[$i]["hinhanh"].'">
                         </a>
                     </div>
                     <div class="pro-detail">
-                        <h6 class="pro-name"><a href="index.php?to=chitiettincanban&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a></h6>
+                        <h6 class="pro-name"><a href="index.php?to=chitiettincanmua&id='.$tincanmua[$i]["idtincanmua"].'">'.$tincanmua[$i]["tensach"].'</a></h6>
                         <div class="pro-price">
                             <p class="pro-price sale">'.number_format($tincanmua[$i]["giamax"], 0, ',', '.').'₫</p>
                         </div>

@@ -32,7 +32,7 @@ class ThanhToanController{
         echo
         "
         <div class='container'>
-            <a href=''><img src='' class='d-none d-lg-block icon-lg'></a>
+            <a href='./to=trangchu&xem=ban'><img src='public/resource/Logo/logo.png' class='d-none d-lg-block icon-lg'></a>
             <br style='clear:both'>
             <form method='GET' action=''>
                 <div class='row'>
