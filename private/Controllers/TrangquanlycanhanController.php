@@ -99,7 +99,7 @@ class TrangQuanLyCaNhanCtrl {
         echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="index.php?to=chitietdondathang&id=' . $dondathang[ $i ][ "iddondathang" ] . '" class="img-wrapper">
+                        <a href="index.php?to=chitietdondathang&loai=donbanhang&id=' . $dondathang[ $i ][ "iddondathang" ] . '" class="img-wrapper">
                             <img class="pro-img" src="' . $dondathang[ $i ][ "diachianh" ] . '">
                         </a>
                     </div>
@@ -130,7 +130,7 @@ class TrangQuanLyCaNhanCtrl {
         echo '
 			<div class="row items">
                     <div class="col-md-3 col-lg-2 col-xl-2 col-5">
-                        <a href="index.php?to=chitietdondathang&id=' . $dondathang[ $i ][ "iddondathang" ] . '" class="img-wrapper">
+                        <a href="index.php?to=chitietdondathang&loai=dondatmua&id=' . $dondathang[ $i ][ "iddondathang" ] . '" class="img-wrapper">
                             <img class="pro-img" src="' . $dondathang[ $i ][ "diachianh" ] . '">
                         </a>
                     </div>
